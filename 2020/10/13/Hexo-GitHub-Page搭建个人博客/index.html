@@ -229,13 +229,132 @@
   </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
-      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo2.png" class="lazyload placeholder" data-srcset="/medias/logo2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
       <h3 class="drawer-box-head_title">117</h3>
       <h5 class="drawer-box-head_desc">亦余心之所善兮，虽九死其犹未悔</h5>
     </div>
     
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-link"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         
           <li class="drawer-box-content_item">
@@ -299,13 +418,130 @@
     <div class="blog-title" id="author-avatar">
       
         <div class="avatar">
-          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+          <img src="/medias/logo2.png" class="lazyload placeholder" data-srcset="/medias/logo2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
         </div>
       
       <a href="/" class="logo">117</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友情链接">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
       </ul>
       
@@ -423,6 +659,21 @@
         
  <!-- prismjs 代码高亮 -->
  
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -508,13 +759,17 @@
 </tbody></table>
 </li>
 <li><p>检查版本</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git version</span><br><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> version
+<span class="token function">node</span> -v
+<span class="token function">npm</span> -v<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/git-v.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/git-v.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 </li>
 <li><p>安装hexo</p>
 <p> 创建一个文件夹，文件夹内右键Git Bash Here 执行:<code>npm install -g hexo-cli</code><br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_9CshgcY4DP.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_9CshgcY4DP.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br> 安装好后，执行以下命令，在新文件夹创建所需文件</p>
- <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init myBlog</span><br><span class="line">cd myBlog</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init myBlog
+<span class="token builtin class-name">cd</span> myBlog
+<span class="token function">npm</span> <span class="token function">install</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_oN3xD1u1mc.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_oN3xD1u1mc.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_rTyIO2jyeD.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_rTyIO2jyeD.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 <p> 安装好后，myBlog文件夹的目录如下:<br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/msedge_4e0qlhEige.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/msedge_4e0qlhEige.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
@@ -545,18 +800,24 @@
 </li>
 <li><p>如果没有的话,就生成一个SSH keys:</p>
 <p>  先执行以下命令配置本地账户:</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;用户名&quot;</span><br><span class="line">git config --global user.email &quot;邮箱地址&quot;</span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config --global user.name <span class="token string">"用户名"</span>
+<span class="token function">git</span> config --global user.email <span class="token string">"邮箱地址"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>  <code>ssh-keygen -t rsa -C &quot;上面的游戏&quot;</code></p>
 <p>  然后会出现:</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file in which to save the key (/Users/you/.ssh/id_rsa): </span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Generating public/private rsa key pair.
+Enter <span class="token function">file</span> <span class="token keyword">in</span> <span class="token function">which</span> to save the key <span class="token punctuation">(</span>/Users/you/.ssh/id_rsa<span class="token punctuation">)</span>: <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>  就是让你输入SSH keys要保存在哪里,一般不用改,就直接回车就好了.</p>
 <p>  然后会出现:</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase (empty for no passphrase): [Type a passphrase] </span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Enter same passphrase again: [Type passphrase again]</span> </span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Enter passphrase <span class="token punctuation">(</span>empty <span class="token keyword">for</span> no passphrase<span class="token punctuation">)</span>: <span class="token punctuation">[</span>Type a passphrase<span class="token punctuation">]</span> 
+<span class="token comment"># Enter same passphrase again: [Type passphrase again] </span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>  冒号后面输入一个密码,这个密码后面会用到,所以要记住!</p>
 <p>  创建成功后,他会提示你SSH keys保存在哪里:</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved in /Users/you/.ssh/id_rsa.</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">Your public key has been saved <span class="keyword">in</span> /Users/you/.ssh/id_rsa.pub.</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">The key fingerprint is:</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span></span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Your identification has been saved <span class="token keyword">in</span> /Users/you/.ssh/id_rsa.
+<span class="token comment"># Your public key has been saved in /Users/you/.ssh/id_rsa.pub.</span>
+<span class="token comment"># The key fingerprint is:</span>
+<span class="token comment"># 01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>  如图:<br>  <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/ssh_p1.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/ssh_p1.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 </li>
@@ -572,14 +833,17 @@
 </li>
 <li><p>测试连接</p>
 <p>  回到git bash执行<code>ssh -T git@github.com</code><br>  <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_7Juqz6PmpM.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_7Juqz6PmpM.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br>  如上图，一些奇怪的提示，最后问你yes&#x2F;no，输入yes就好<br>  然后提示你输入密码，如下</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase for key &#x27;/c/Users/zqzes/.ssh/id_rsa&#x27;:</span><br></pre></td></tr></table></figure>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Enter passphrase <span class="token keyword">for</span> key <span class="token string">'/c/Users/zqzes/.ssh/id_rsa'</span><span class="token builtin class-name">:</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>  最后它提示你:</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi, 用户名/用户名.github.io! You&#x27;ve successfully authenticated, but GitHub does notprovide shell access.</span><br></pre></td></tr></table></figure></li>
+  <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">Hi, 用户名/用户名.github.io<span class="token operator">!</span> You've successfully authenticated, but GitHub does notprovide shell access.<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre></li>
 </ul>
 <p> 这样就ok了</p>
 </li>
 <li><p>配置yml准备发布<br> myBlog内有个文件叫<code>_config.yml</code>,打开它,拉到最底下,做如下修改:</p>
- <figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">type:</span> <span class="string">&#x27;git&#x27;</span>   <span class="comment">#这里应为git,如使用github会发生错误</span></span><br><span class="line">    <span class="attr">repository:</span> <span class="string">https://github.com/zqzess/zqzess.github.io</span>    <span class="comment">#把zqzess改成自己的用户名</span></span><br><span class="line">    <span class="attr">branch:</span> <span class="string">master</span></span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">'git'</span>   <span class="token comment">#这里应为git,如使用github会发生错误</span>
+    <span class="token key atrule">repository</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/zqzess/zqzess.github.io    <span class="token comment">#把zqzess改成自己的用户名</span>
+    <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p> 然后git bash执行<code>npm install hexo-deployer-git --save</code>安装部署插件<br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_40ozYzOhzN.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/mintty_40ozYzOhzN.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 <p> 最后执行以下命令就可以部署上传了</p>
@@ -593,15 +857,15 @@
 <p> git bash执行:<code>hexo new &#39;文章标题&#39;</code></p>
 <p> 完成后在&#x2F;source&#x2F;_posts下可以看到’文章标题.md’的文件，md是MarkDown的拓展名,网上可以找到它的语法</p>
 <p> 文章写好依次后执行:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-none"><code class="language-none">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-none"><code class="language-none">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p> 然后可以在<a href="http://localhost::4000预览效果">http://localhost::4000预览效果</a></p>
 <p> 最后，发布到github，依次执行:</p>
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-none"><code class="language-none">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
- <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+ <pre class="line-numbers language-none"><code class="language-none">hexo g -d<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p> hexo clean可以请出缓存和已生成静态文件</p>
 </li>
@@ -1362,7 +1626,7 @@ npm
   class=""
   server="tencent"
   type="playlist"
-  id="8062553743"
+  id="8358331802"
   fixed='true'
   autoplay='false'
   theme='#42b983'

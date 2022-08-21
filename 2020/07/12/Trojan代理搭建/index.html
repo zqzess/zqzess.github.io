@@ -229,13 +229,132 @@
   </transition>
   <div class="drawer-box" :class="{'active': visible}">
     <div class="drawer-box-head bg-color">
-      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+      <img class="drawer-box-head_logo lazyload placeholder" src="/medias/logo2.png" class="lazyload placeholder" data-srcset="/medias/logo2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
       <h3 class="drawer-box-head_title">117</h3>
       <h5 class="drawer-box-head_desc">亦余心之所善兮，虽九死其犹未悔</h5>
     </div>
     
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
+        
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fas fa-link"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fas fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         
           <li class="drawer-box-content_item">
@@ -299,13 +418,130 @@
     <div class="blog-title" id="author-avatar">
       
         <div class="avatar">
-          <img src="/medias/logo.png" class="lazyload placeholder" data-srcset="/medias/logo.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
+          <img src="/medias/logo2.png" class="lazyload placeholder" data-srcset="/medias/logo2.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="logo">
         </div>
       
       <a href="/" class="logo">117</a>
     </div>
     <nav class="navbar">
       <ul class="menu">
+        
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fas fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友情链接">
+                  
+                  <span class="name">友情链接</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fas fa-link"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fas fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fas fa-music" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/huoban">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>友情连接</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a href="/me">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>关于我</span>
+                    </a>
+                  </li>
+                  
+                  <li>
+                    <a target="_blank" rel="noopener" href="http://baidu.com">
+                      
+                      <i class="fas fa-film" style="margin-top: -20px;"></i>
+                      
+                      <span>百度</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
       </ul>
       
@@ -423,6 +659,21 @@
         
  <!-- prismjs 代码高亮 -->
  
+    
+    <link href="/js/prism/prism-line-numbers.css" rel="stylesheet">
+    
+        <link href="/js/prism/prism.min.css" rel="stylesheet">
+    
+
+    <style>
+        pre[class*="language-"] {
+            overflow-y: hidden;
+        }
+        .line-numbers .line-numbers-rows {
+            border: none;
+        }
+    </style>
+  
 
 
 <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
@@ -509,9 +760,53 @@
 <li>域名的证书，可从<strong>let’s ENcrypt</strong>获取免费证书，或者腾讯云阿里云都提供免费证书</li>
 <li>使用bitvise或者xshell连接linux服务器</li>
 </ul>
-<p>安装trojan服务端,以centos7为例<br>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/trojan-gfw/trojan-quickstart/master/trojan-quickstart.sh)&quot;</span><br></pre></td></tr></table></figure><br>安装完成后，trojan配置文件是在 <code>/usr/local/etc/trojan/config.json</code></p>
+<p>安装trojan服务端,以centos7为例<br>  <pre class="line-numbers language-none"><code class="language-none">sudo bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>安装完成后，trojan配置文件是在 <code>/usr/local/etc/trojan/config.json</code></p>
 <p>初始内容是</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    &quot;run_type&quot;: &quot;server&quot;, </span><br><span class="line">    &quot;local_addr&quot;: &quot;0.0.0.0&quot;,</span><br><span class="line">    &quot;local_port&quot;: 443,</span><br><span class="line">    &quot;remote_addr&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">    &quot;remote_port&quot;: 80,</span><br><span class="line">    &quot;password&quot;: [</span><br><span class="line">        &quot;password1&quot;,</span><br><span class="line">        &quot;password2&quot;</span><br><span class="line">    ],</span><br><span class="line">    &quot;log_level&quot;: 1,</span><br><span class="line">    &quot;ssl&quot;: &#123;</span><br><span class="line">        &quot;cert&quot;: &quot;/path/to/certificate.crt&quot;,</span><br><span class="line">        &quot;key&quot;: &quot;/path/to/private.key&quot;,</span><br><span class="line">        &quot;key_password&quot;: &quot;&quot;,</span><br><span class="line">        &quot;cipher&quot;: &quot;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384&quot;,</span><br><span class="line">        &quot;cipher_tls13&quot;: &quot;TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384&quot;,</span><br><span class="line">        &quot;prefer_server_cipher&quot;: true,</span><br><span class="line">        &quot;alpn&quot;: [</span><br><span class="line">            &quot;http/1.1&quot;</span><br><span class="line">        ],</span><br><span class="line">        &quot;reuse_session&quot;: true,</span><br><span class="line">        &quot;session_ticket&quot;: false,</span><br><span class="line">        &quot;session_timeout&quot;: 600,</span><br><span class="line">        &quot;plain_http_response&quot;: &quot;&quot;,</span><br><span class="line">        &quot;curves&quot;: &quot;&quot;,</span><br><span class="line">        &quot;dhparam&quot;: &quot;&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;tcp&quot;: &#123;</span><br><span class="line">        &quot;prefer_ipv4&quot;: false,</span><br><span class="line">        &quot;no_delay&quot;: true,</span><br><span class="line">        &quot;keep_alive&quot;: true,</span><br><span class="line">        &quot;reuse_port&quot;: false,</span><br><span class="line">        &quot;fast_open&quot;: false,</span><br><span class="line">        &quot;fast_open_qlen&quot;: 20</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;mysql&quot;: &#123;</span><br><span class="line">        &quot;enabled&quot;: false,</span><br><span class="line">        &quot;server_addr&quot;: &quot;127.0.0.1&quot;,</span><br><span class="line">        &quot;server_port&quot;: 3306,</span><br><span class="line">        &quot;database&quot;: &quot;trojan&quot;,</span><br><span class="line">        &quot;username&quot;: &quot;trojan&quot;,</span><br><span class="line">        &quot;password&quot;: &quot;&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">&#123;
+    &quot;run_type&quot;: &quot;server&quot;, 
+    &quot;local_addr&quot;: &quot;0.0.0.0&quot;,
+    &quot;local_port&quot;: 443,
+    &quot;remote_addr&quot;: &quot;127.0.0.1&quot;,
+    &quot;remote_port&quot;: 80,
+    &quot;password&quot;: [
+        &quot;password1&quot;,
+        &quot;password2&quot;
+    ],
+    &quot;log_level&quot;: 1,
+    &quot;ssl&quot;: &#123;
+        &quot;cert&quot;: &quot;&#x2F;path&#x2F;to&#x2F;certificate.crt&quot;,
+        &quot;key&quot;: &quot;&#x2F;path&#x2F;to&#x2F;private.key&quot;,
+        &quot;key_password&quot;: &quot;&quot;,
+        &quot;cipher&quot;: &quot;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384&quot;,
+        &quot;cipher_tls13&quot;: &quot;TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384&quot;,
+        &quot;prefer_server_cipher&quot;: true,
+        &quot;alpn&quot;: [
+            &quot;http&#x2F;1.1&quot;
+        ],
+        &quot;reuse_session&quot;: true,
+        &quot;session_ticket&quot;: false,
+        &quot;session_timeout&quot;: 600,
+        &quot;plain_http_response&quot;: &quot;&quot;,
+        &quot;curves&quot;: &quot;&quot;,
+        &quot;dhparam&quot;: &quot;&quot;
+    &#125;,
+    &quot;tcp&quot;: &#123;
+        &quot;prefer_ipv4&quot;: false,
+        &quot;no_delay&quot;: true,
+        &quot;keep_alive&quot;: true,
+        &quot;reuse_port&quot;: false,
+        &quot;fast_open&quot;: false,
+        &quot;fast_open_qlen&quot;: 20
+    &#125;,
+    &quot;mysql&quot;: &#123;
+        &quot;enabled&quot;: false,
+        &quot;server_addr&quot;: &quot;127.0.0.1&quot;,
+        &quot;server_port&quot;: 3306,
+        &quot;database&quot;: &quot;trojan&quot;,
+        &quot;username&quot;: &quot;trojan&quot;,
+        &quot;password&quot;: &quot;&quot;
+    &#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><code>local_port</code>是要监听的端口，默认443，不要改</li>
 <li><code>remote_addr</code>和<code>remote_port</code>:非trojan协议是，请求将转发<br>的地址和端口。可以填有效的ip&#x2F;端口 。<strong>如果你要在本机搭建网站请保持默认不要更改。</strong></li>
@@ -521,26 +816,76 @@
 <li><code>alpn</code>混淆默认就好</li>
 </ul>
 <p>修改好配置文件后，保存，然后输入linux命令设置开机启动：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable trojan</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">systemctl enable trojan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>再启动trojan：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start trojan</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">systemctl start trojan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>检查是否在运行：<code>ss -lp | grep trojan</code>,有输出内容则正常<br>，输出为空，可能是</p>
 <ul>
 <li>config.json文件语法出错</li>
 <li>开了selinux，请先关闭在启动。关闭:<code>setenforce 0</code></li>
 </ul>
 <p><code>service iptables status</code>查看防火墙状态<br>，如果在运行请放行端口 </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --add-service=https # 端口是443</span><br><span class="line">firewall-cmd --permanent --add-port=端口号/tcp # 其他端口号</span><br><span class="line">firewall-cmd --reload # 重新加载防火墙</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">firewall-cmd --permanent --add-service&#x3D;https # 端口是443
+firewall-cmd --permanent --add-port&#x3D;端口号&#x2F;tcp # 其他端口号
+firewall-cmd --reload # 重新加载防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>或者永久关闭防火墙（<strong>不建议</strong>）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 永久关闭防火墙</span><br><span class="line"></span><br><span class="line">chkconfig iptables off  </span><br><span class="line"></span><br><span class="line"># 永久关闭后重启</span><br><span class="line"></span><br><span class="line">chkconfig iptables on　　</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none"># 永久关闭防火墙
+
+chkconfig iptables off  
+
+# 永久关闭后重启
+
+chkconfig iptables on　　<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="在本服务器安装网站伪装"><a href="#在本服务器安装网站伪装" class="headerlink" title="在本服务器安装网站伪装"></a>在本服务器安装网站伪装</h3><p>GFW是根据特征值来封锁的，如果你长时间大流量访问一个网站，它来查看发现网站不存在<br>，这明显有问题，所以建议设置伪装站。如果原本有nginx部署的网站，也可以参考此来伪装</p>
 <p>安装nginx</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">##安装</span><br><span class="line">yum install -y epel-release &amp;&amp; yum install -y nginx</span><br><span class="line">##设置开机自启并启动</span><br><span class="line">systemctl enable nginx; systemctl start nginx</span><br><span class="line">##放行防火墙</span><br><span class="line">firewall-cmd --permanent --add-service=http</span><br><span class="line">##防火墙重新加载配置</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">##安装
+yum install -y epel-release &amp;&amp; yum install -y nginx
+##设置开机自启并启动
+systemctl enable nginx; systemctl start nginx
+##放行防火墙
+firewall-cmd --permanent --add-service&#x3D;http
+##防火墙重新加载配置
+firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>伪装网站模版可以百度搜索下载<br>直接上传到<code>/usr/share/nginx</code>下</p>
 <p>nginx配置文件路径<code>/etc/nginx/nginx.conf</code></p>
 <p>把原始的<code>nginx.conf</code>改成如下所示<br>ps:<strong>只改动server{}块，其他不要动，把原来的是server{}改掉，再添加一个强制转发https&#x2F;443端口的server{}块</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">        listen 127.0.0.1:80;</span><br><span class="line">        server_name example.com;#域名</span><br><span class="line">        root  /usr/share/nginx/example.com;#网页文件夹路径</span><br><span class="line">        index index.html; #自己的网页主页</span><br><span class="line">        </span><br><span class="line">        ssl_certificate   /etc/pki/nginx/server.crt;#改成自己的证书路径</span><br><span class="line">        ssl_certificate_key   /etc/pki/nginx/private/server.key;#改成自己的证书秘钥路径</span><br><span class="line">        ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;</span><br><span class="line">        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;</span><br><span class="line">        ssl_prefer_server_ciphers on;</span><br><span class="line">        ssl_session_cache shared:SSL:10m;</span><br><span class="line">        ssl_session_timeout 10m;</span><br><span class="line"></span><br><span class="line">        # Load configuration files for the default server block.</span><br><span class="line">        include /etc/nginx/default.d/*.conf;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">            index index.html;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 404 /404.html;</span><br><span class="line">            location = /40x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        error_page 500 502 503 504 /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen [::]:80 default_server;</span><br><span class="line">    server_name example.com;</span><br><span class="line">    rewrite ^(.*)$ https://$&#123;server_name&#125;$1 permanent; </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">server &#123;
+        listen 127.0.0.1:80;
+        server_name example.com;#域名
+        root  &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;example.com;#网页文件夹路径
+        index index.html; #自己的网页主页
+        
+        ssl_certificate   &#x2F;etc&#x2F;pki&#x2F;nginx&#x2F;server.crt;#改成自己的证书路径
+        ssl_certificate_key   &#x2F;etc&#x2F;pki&#x2F;nginx&#x2F;private&#x2F;server.key;#改成自己的证书秘钥路径
+        ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
+        ssl_prefer_server_ciphers on;
+        ssl_session_cache shared:SSL:10m;
+        ssl_session_timeout 10m;
+
+        # Load configuration files for the default server block.
+        include &#x2F;etc&#x2F;nginx&#x2F;default.d&#x2F;*.conf;
+
+        location &#x2F; &#123;
+            index index.html;
+        &#125;
+
+        error_page 404 &#x2F;404.html;
+            location &#x3D; &#x2F;40x.html &#123;
+        &#125;
+
+        error_page 500 502 503 504 &#x2F;50x.html;
+            location &#x3D; &#x2F;50x.html &#123;
+        &#125;
+    &#125;
+
+server &#123;
+    listen 80 default_server;
+    listen [::]:80 default_server;
+    server_name example.com;
+    rewrite ^(.*)$ https:&#x2F;&#x2F;$&#123;server_name&#125;$1 permanent; 
+    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>把上面的example.com改成自己的域名</p>
 <p><strong>改好后保存，<code>nginx -t</code>检查配置文件是否有错误，没错误输入<code>nginx -s reload</code>重新加载配置文件</strong></p>
 <h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><ul>
@@ -553,7 +898,7 @@
 <p><img src="https://cdn.cacher.io/attachments/u/3d41edeyhrwt3/KqKlwMUGmQyW92puGrF5XayMFTssHEVq/%E4%BB%A3%E7%90%86.PNG" class="lazyload placeholder" data-srcset="https://cdn.cacher.io/attachments/u/3d41edeyhrwt3/KqKlwMUGmQyW92puGrF5XayMFTssHEVq/%E4%BB%A3%E7%90%86.PNG" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
 <p>使用代理服务器<br>地址<code>127.0.0.1</code>端口填trojan客户端填的<code>local_port</code></p>
 <p>下面一栏填入</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;172.32.*;192.168.*</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;172.32.*;192.168.*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>请勿将代理服务器用于本地（Intranet）地址<strong>选上</strong><br>最后保存</p>
 <h3 id="有v2rayN客户端的"><a href="#有v2rayN客户端的" class="headerlink" title="有v2rayN客户端的"></a>有v2rayN客户端的</h3><p>在v2rayN上添加Socks服务器<br>服务器地址填<code>127.0.0.1</code>,服务器端口填你上面填的端口，别名trojan，然后保存就可以使用了</p>
 
@@ -1281,7 +1626,7 @@ Shar
   class=""
   server="tencent"
   type="playlist"
-  id="8062553743"
+  id="8358331802"
   fixed='true'
   autoplay='false'
   theme='#42b983'
