@@ -81,7 +81,8 @@
         
     
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="117" type="application/atom+xml">
+</head>
 
   
   <!-- 依赖于jquery和vue -->
@@ -325,15 +326,6 @@
                   </li>
                   
                   <li>
-                    <a href="/huoban">
-                      
-                      <i class="fas fa-film" style="margin-top: -20px;"></i>
-                      
-                      <span>友情连接</span>
-                    </a>
-                  </li>
-                  
-                  <li>
                     <a href="/me">
                       
                       <i class="fas fa-film" style="margin-top: -20px;"></i>
@@ -508,15 +500,6 @@
                       <i class="fas fa-music" style="margin-top: -20px;"></i>
                       
                       <span>图库</span>
-                    </a>
-                  </li>
-                  
-                  <li>
-                    <a href="/huoban">
-                      
-                      <i class="fas fa-film" style="margin-top: -20px;"></i>
-                      
-                      <span>友情连接</span>
                     </a>
                   </li>
                   
@@ -708,7 +691,7 @@
             <span class="post-time">2021-01-27</span>
           </div>
           <div class="post-title">
-            <a class="post-title-link" href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">N1掉盘暂时性解决办法</a>
+            <a class="post-title-link" href="/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/">N1掉盘暂时性解决办法</a>
           </div>
           <div class="post-meta">
             <div class="post-tags">
@@ -730,7 +713,7 @@
             </div>
           </div>
           <div class="post-img-mobile">
-            <a href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" style="background-size: cover; 
+            <a href="/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/" style="background-size: cover; 
               background-position: center center;">
               <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
             </a>
@@ -742,13 +725,13 @@
           </div>
         </div>
         <div class="post-more">
-          <a href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">
+          <a href="/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/">
             <i class="iconfont iconmore" pointer style="float: right;  " title="阅读更多"></i>
           </a>
         </div>
       </div>
       <div class="post-img">
-        <a href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" style="background-size: cover; 
+        <a href="/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/" style="background-size: cover; 
           background-position: center center;">
           <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
         </a>
@@ -1414,68 +1397,27 @@
 <!-- 评论所需js -->
 
   
-    <script type="text/javascript">
-  var utteranceCommon = {};
-
-  function check_utterance() {
-    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
-    if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
-    } else {
-      utteranceCommon.Theme = 'github-light';
-    }
-
-    return document.getElementById("gitment-container");
-  }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+    <script src="https://unpkg.com/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  comment_el = '#gitalk-container';
+  load_gitalk = function () {
     if ($(comment_el).length) {
-      // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
-
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', '')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
-      // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      var gitalk = new Gitalk({
+        clientID: 'c3bc0d0c3b249f68bfc4',
+        clientSecret: 'b246d792117de78be4156a879bf5e3489b7a2de2',
+        id: window.location.pathname,
+        repo: 'TalkData',
+        owner: 'zqzess',
+        admin: ['zqzess']
+      })
+      gitalk.render('gitalk-container')
     }
   }
-
-  function dark_utterance() {
-    const HEAD = check_utterance();
-    if (!HEAD) return;
-    const message = {
-      type: 'set-theme',
-      theme: utteranceCommon.Theme
-    };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
-  }
-
-  $(document).ready(load_utterance);
+  $(document).ready(load_gitalk);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    load_gitalk();
   });
-
-  $('.dark').click(function () {
-    setTimeout(() => {
-      dark_utterance();
-    });
-  })
-
 </script>
-
-<style>
-  .utterances {
-    max-width: inherit !important;
-  }
-</style>
   
 
 

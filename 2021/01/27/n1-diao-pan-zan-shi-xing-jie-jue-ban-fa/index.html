@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>Trojan代理搭建 | 117</title>
+  <title>N1掉盘暂时性解决办法 | 117</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -81,7 +81,8 @@
         
     
 
-<meta name="generator" content="Hexo 6.2.0"></head>
+<meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="117" type="application/atom+xml">
+</head>
 
   
   <!-- 依赖于jquery和vue -->
@@ -325,15 +326,6 @@
                   </li>
                   
                   <li>
-                    <a href="/huoban">
-                      
-                      <i class="fas fa-film" style="margin-top: -20px;"></i>
-                      
-                      <span>友情连接</span>
-                    </a>
-                  </li>
-                  
-                  <li>
                     <a href="/me">
                       
                       <i class="fas fa-film" style="margin-top: -20px;"></i>
@@ -512,15 +504,6 @@
                   </li>
                   
                   <li>
-                    <a href="/huoban">
-                      
-                      <i class="fas fa-film" style="margin-top: -20px;"></i>
-                      
-                      <span>友情连接</span>
-                    </a>
-                  </li>
-                  
-                  <li>
                     <a href="/me">
                       
                       <i class="fas fa-film" style="margin-top: -20px;"></i>
@@ -685,21 +668,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/15.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/7.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        Trojan代理搭建
+        N1掉盘暂时性解决办法
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> 发表于：2020-07-12 |
+          <i class="fas fa-calendar"></i> 发表于：2021-01-27 |
         </span>
       
 
@@ -707,8 +690,12 @@
         <span class="post-detail-header_categories">
           <i class="iconfont iconbookmark1"></i> 分类：
           
-            <a href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="post-detail-header_category">
-              科学上网
+            <a href="/categories/Armbian/" class="post-detail-header_category">
+              Armbian
+            </a>
+          
+            <a href="/categories/Armbian/N1/" class="post-detail-header_category">
+              N1
             </a>
           
         </span>
@@ -732,187 +719,79 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h2 id="Trojan"><a href="#Trojan" class="headerlink" title="Trojan"></a>Trojan</h2><p>trojan是最近兴起的网络工具，出来时间的比较短，<br>它主要原理是把流量伪装成常见的https流量，虽然v2ray也能实现伪装https，<br>但是与trojan比起来多了很多层加密，所以连接速度也会慢慢上很多。<br>目前trojan使用的人数应该是比不上v2ray的，官方客户端也很简陋，就是个控制台，<br>生态也不是很完善。</p>
-<h2 id="声明"><a href="#声明" class="headerlink" title="声明"></a>声明</h2><p>目前翻墙还是违法的，虽然有各种伪装翻墙手段，但是既然翻墙了就有可能会被GFW检测到，<br>同时也可能会被网警查到。<strong>所以请不要翻墙干违法的事情，身为国家公民，有义务去维护国家利益，<br>而不是损害国家利益。</strong> <del>所以原则上不建议翻墙</del> ，但是有的时候还有有需要的，比如github<br>翻墙加载下载速度都比直连快;-) </p>
-<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><p>trojan项目官网：<a target="_blank" rel="noopener" href="https://github.com/trojan-gfw">https://github.com/trojan-gfw</a></p>
-<table>
-<thead>
-<tr>
-<th>trojan win客户端下载</th>
-<th align="center">安卓</th>
-<th align="right">linux</th>
-<th align="center">mac</th>
-<th align="center">ios</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/releases">trojan</a></td>
-<td align="center"><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/igniter/releases">igniter</a></td>
-<td align="right"><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/releases">trojan</a></td>
-<td align="center"><a target="_blank" rel="noopener" href="https://github.com/trojan-gfw/trojan/releases">trojan-mac</a></td>
-<td align="center">iphone&#x2F;ipad 建议使用shadowrocket</td>
-</tr>
-</tbody></table>
-<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><p>前置条件</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>  最近入了N1的坑,刷了armbian系统,做emby服务器,然后就遇到了个大坑</p>
+<p>  我的移动硬盘是东芝的，自带休眠，一开始正常使用，过后就发现会掉盘</p>
+<p>  体现在ls命令上 <code>ls: reading directory &#39;.&#39;: Input/output error</code></p>
+<p>  使用lsblk命令发现sda会变sdb,sdc….</p>
+<p>  百度一圈，都是在&#x2F;etc&#x2F;fstab 加入uuid识别挂载，但是这样不管用啊，还是掉盘，一掉盘得手动重新挂载或者重启n1</p>
+<h1 id="暂时解决办法"><a href="#暂时解决办法" class="headerlink" title="暂时解决办法"></a>暂时解决办法</h1><p>  由于不知道到底是什么原因导致的，只能写个小脚本解决，</p>
 <ul>
-<li>需要一台国外的vps，系统建议centos7；vps商家新手建议 <font color=#00ffff size=3>vultr</font></li>
-<li>域名；域名可以从国外namesilo或者namecheap购买，或者国内腾讯云，阿里云购买</li>
-<li>域名的证书，可从<strong>let’s ENcrypt</strong>获取免费证书，或者腾讯云阿里云都提供免费证书</li>
-<li>使用bitvise或者xshell连接linux服务器</li>
+<li><p>思路:</p>
+<blockquote>
+<p>每30秒ls检查一次，ls失败则自动挂载</p>
+</blockquote>
+</li>
+<li><p>添加uuid识别挂载:</p>
+<ol>
+<li><p>lsblk查看分区信息<br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/lsblk.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/lsblk.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br> 如图，我的是sda-sda1，挂载点是&#x2F;mnt&#x2F;sda1</p>
+</li>
+<li><p>blkid查看分区uuid<br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_orFlp4Bqaa.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_orFlp4Bqaa.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br> 如图，我硬盘标签的是<code>LABEL=&quot;TOSHIBA&quot;</code> uuid是 <code>UUID=&quot;D282A4C682A4B081&quot;</code> 格式是 <code>TYPE=&quot;ntfs&quot;</code></p>
+</li>
+<li><p>在fstab添加uuid识别挂载<br> 编辑 <code>/etc/fstab</code>   vi编辑或者winscp登陆n1直接编辑文件<br> 最后一行加入 <code>uuid=   /mnt/sda1  auto defaults   0 0</code><br> 保存后执行<code>mount -a</code><br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_c1HzeZypEZ.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_c1HzeZypEZ.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+</li>
+</ol>
+</li>
+<li><p>制作shell脚本自动检测掉盘重新挂载</p>
+<ol>
+<li><p>检测脚本<br> automount.sh  -&gt;不会用的可以创建txt文本然后修改为.sh，再用winscp上传至&#x2F;home下</p>
+ <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">#!&#x2F;bin&#x2F;bash
+if ls &#39;&#x2F;mnt&#x2F;sda1&#39; 2&gt;&amp;1
+then
+  echo &quot;mounted&quot;
+else
+  echo &quot;not mounted&quot;
+  mount -a
+fi<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>每30秒执行<br> 由于cron定时任务最低1分钟执行，所以得再写一个脚本停顿30秒再执行<br> keep.sh</p>
+ <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">#!&#x2F;bin&#x2F;bash
+date +&#39;%Y-%m-%d %H:%M:%S&#39;
+&#x2F;home&#x2F;automount.sh
+sleep 30
+date +&#39;%Y-%m-%d %H:%M:%S&#39;
+&#x2F;home&#x2F;automount.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+</ol>
+<p><strong>上面两个脚本都放在&#x2F;home下</strong></p>
+<ol start="4">
+<li><p>赋予权限</p>
+ <pre class="line-numbers language-none"><code class="language-none">chmod 777 -R &#x2F;home&#x2F;automount.sh
+chmod 777 -R &#x2F;home&#x2F;keep.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>添加定时任务<br> 执行<code>crontab -e</code></p>
+ <pre class="line-numbers language-sh" data-language="sh"><code class="language-sh">	* * * * * &#x2F;home&#x2F;keep.sh &gt;&gt; &#x2F;home&#x2F;log.txt
+0 0 12 * * ? &#x2F;home&#x2F;autoremove.sh<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p> 如果不想保留日志,用下面的写法</p>
+ <pre class="line-numbers language-none"><code class="language-none">* * * * * &#x2F;home&#x2F;keep.sh<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p> 完成后执行<code>crontab -l</code>可以查看定时任务<br> <img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_7nE4CqsRUI.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse/pic/WindowsTerminal_7nE4CqsRUI.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+</li>
+</ol>
+</li>
 </ul>
-<p>安装trojan服务端,以centos7为例<br>  <pre class="line-numbers language-none"><code class="language-none">sudo bash -c &quot;$(curl -fsSL https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;trojan-gfw&#x2F;trojan-quickstart&#x2F;master&#x2F;trojan-quickstart.sh)&quot;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>安装完成后，trojan配置文件是在 <code>/usr/local/etc/trojan/config.json</code></p>
-<p>初始内容是</p>
-<pre class="line-numbers language-none"><code class="language-none">&#123;
-    &quot;run_type&quot;: &quot;server&quot;, 
-    &quot;local_addr&quot;: &quot;0.0.0.0&quot;,
-    &quot;local_port&quot;: 443,
-    &quot;remote_addr&quot;: &quot;127.0.0.1&quot;,
-    &quot;remote_port&quot;: 80,
-    &quot;password&quot;: [
-        &quot;password1&quot;,
-        &quot;password2&quot;
-    ],
-    &quot;log_level&quot;: 1,
-    &quot;ssl&quot;: &#123;
-        &quot;cert&quot;: &quot;&#x2F;path&#x2F;to&#x2F;certificate.crt&quot;,
-        &quot;key&quot;: &quot;&#x2F;path&#x2F;to&#x2F;private.key&quot;,
-        &quot;key_password&quot;: &quot;&quot;,
-        &quot;cipher&quot;: &quot;ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384&quot;,
-        &quot;cipher_tls13&quot;: &quot;TLS_AES_128_GCM_SHA256:TLS_CHACHA20_POLY1305_SHA256:TLS_AES_256_GCM_SHA384&quot;,
-        &quot;prefer_server_cipher&quot;: true,
-        &quot;alpn&quot;: [
-            &quot;http&#x2F;1.1&quot;
-        ],
-        &quot;reuse_session&quot;: true,
-        &quot;session_ticket&quot;: false,
-        &quot;session_timeout&quot;: 600,
-        &quot;plain_http_response&quot;: &quot;&quot;,
-        &quot;curves&quot;: &quot;&quot;,
-        &quot;dhparam&quot;: &quot;&quot;
-    &#125;,
-    &quot;tcp&quot;: &#123;
-        &quot;prefer_ipv4&quot;: false,
-        &quot;no_delay&quot;: true,
-        &quot;keep_alive&quot;: true,
-        &quot;reuse_port&quot;: false,
-        &quot;fast_open&quot;: false,
-        &quot;fast_open_qlen&quot;: 20
-    &#125;,
-    &quot;mysql&quot;: &#123;
-        &quot;enabled&quot;: false,
-        &quot;server_addr&quot;: &quot;127.0.0.1&quot;,
-        &quot;server_port&quot;: 3306,
-        &quot;database&quot;: &quot;trojan&quot;,
-        &quot;username&quot;: &quot;trojan&quot;,
-        &quot;password&quot;: &quot;&quot;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li><code>local_port</code>是要监听的端口，默认443，不要改</li>
-<li><code>remote_addr</code>和<code>remote_port</code>:非trojan协议是，请求将转发<br>的地址和端口。可以填有效的ip&#x2F;端口 。<strong>如果你要在本机搭建网站请保持默认不要更改。</strong></li>
-<li><code>password</code>密码，需要几个账号就，几个密码，<strong>最后一行不要有逗号</strong></li>
-<li><code>cert</code>&amp;<code>key</code>,证书和域名，腾讯云申请的证书请选择nginx版的</li>
-<li><code>key_password</code>，证书如果有密码就填上，无不要填</li>
-<li><code>alpn</code>混淆默认就好</li>
-</ul>
-<p>修改好配置文件后，保存，然后输入linux命令设置开机启动：</p>
-<pre class="line-numbers language-none"><code class="language-none">systemctl enable trojan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>再启动trojan：</p>
-<pre class="line-numbers language-none"><code class="language-none">systemctl start trojan<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>检查是否在运行：<code>ss -lp | grep trojan</code>,有输出内容则正常<br>，输出为空，可能是</p>
-<ul>
-<li>config.json文件语法出错</li>
-<li>开了selinux，请先关闭在启动。关闭:<code>setenforce 0</code></li>
-</ul>
-<p><code>service iptables status</code>查看防火墙状态<br>，如果在运行请放行端口 </p>
-<pre class="line-numbers language-none"><code class="language-none">firewall-cmd --permanent --add-service&#x3D;https # 端口是443
-firewall-cmd --permanent --add-port&#x3D;端口号&#x2F;tcp # 其他端口号
-firewall-cmd --reload # 重新加载防火墙<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>或者永久关闭防火墙（<strong>不建议</strong>）</p>
-<pre class="line-numbers language-none"><code class="language-none"># 永久关闭防火墙
-
-chkconfig iptables off  
-
-# 永久关闭后重启
-
-chkconfig iptables on　　<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="在本服务器安装网站伪装"><a href="#在本服务器安装网站伪装" class="headerlink" title="在本服务器安装网站伪装"></a>在本服务器安装网站伪装</h3><p>GFW是根据特征值来封锁的，如果你长时间大流量访问一个网站，它来查看发现网站不存在<br>，这明显有问题，所以建议设置伪装站。如果原本有nginx部署的网站，也可以参考此来伪装</p>
-<p>安装nginx</p>
-<pre class="line-numbers language-none"><code class="language-none">##安装
-yum install -y epel-release &amp;&amp; yum install -y nginx
-##设置开机自启并启动
-systemctl enable nginx; systemctl start nginx
-##放行防火墙
-firewall-cmd --permanent --add-service&#x3D;http
-##防火墙重新加载配置
-firewall-cmd --reload<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>伪装网站模版可以百度搜索下载<br>直接上传到<code>/usr/share/nginx</code>下</p>
-<p>nginx配置文件路径<code>/etc/nginx/nginx.conf</code></p>
-<p>把原始的<code>nginx.conf</code>改成如下所示<br>ps:<strong>只改动server{}块，其他不要动，把原来的是server{}改掉，再添加一个强制转发https&#x2F;443端口的server{}块</strong></p>
-<pre class="line-numbers language-none"><code class="language-none">server &#123;
-        listen 127.0.0.1:80;
-        server_name example.com;#域名
-        root  &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;example.com;#网页文件夹路径
-        index index.html; #自己的网页主页
-        
-        ssl_certificate   &#x2F;etc&#x2F;pki&#x2F;nginx&#x2F;server.crt;#改成自己的证书路径
-        ssl_certificate_key   &#x2F;etc&#x2F;pki&#x2F;nginx&#x2F;private&#x2F;server.key;#改成自己的证书秘钥路径
-        ssl_protocols TLSv1.1 TLSv1.2 TLSv1.3;
-        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:HIGH:!aNULL:!MD5:!RC4:!DHE;
-        ssl_prefer_server_ciphers on;
-        ssl_session_cache shared:SSL:10m;
-        ssl_session_timeout 10m;
-
-        # Load configuration files for the default server block.
-        include &#x2F;etc&#x2F;nginx&#x2F;default.d&#x2F;*.conf;
-
-        location &#x2F; &#123;
-            index index.html;
-        &#125;
-
-        error_page 404 &#x2F;404.html;
-            location &#x3D; &#x2F;40x.html &#123;
-        &#125;
-
-        error_page 500 502 503 504 &#x2F;50x.html;
-            location &#x3D; &#x2F;50x.html &#123;
-        &#125;
-    &#125;
-
-server &#123;
-    listen 80 default_server;
-    listen [::]:80 default_server;
-    server_name example.com;
-    rewrite ^(.*)$ https:&#x2F;&#x2F;$&#123;server_name&#125;$1 permanent; 
-    &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>把上面的example.com改成自己的域名</p>
-<p><strong>改好后保存，<code>nginx -t</code>检查配置文件是否有错误，没错误输入<code>nginx -s reload</code>重新加载配置文件</strong></p>
-<h3 id="客户端配置"><a href="#客户端配置" class="headerlink" title="客户端配置"></a>客户端配置</h3><ul>
-<li><code>local_port</code>改成你想要的端口</li>
-<li><code>remote_addr</code>改成你服务器域名，也就是nginx里面填的域名</li>
-<li><code>remote_port</code>服务器监听的端口，443</li>
-<li><code>password</code>服务器trojan设置的密码<br>其他可以不用改，然后保存就可以启动了。<br>无法运行请先<strong>先双击“VC_redist.x86.exe”安装依赖，然后再运行</strong></li>
-</ul>
-<h2 id="设置系统代理上网"><a href="#设置系统代理上网" class="headerlink" title="设置系统代理上网"></a>设置系统代理上网</h2><p>打开设置-&gt;网络和Internet-&gt;代理</p>
-<p><img src="https://cdn.cacher.io/attachments/u/3d41edeyhrwt3/KqKlwMUGmQyW92puGrF5XayMFTssHEVq/%E4%BB%A3%E7%90%86.PNG" class="lazyload placeholder" data-srcset="https://cdn.cacher.io/attachments/u/3d41edeyhrwt3/KqKlwMUGmQyW92puGrF5XayMFTssHEVq/%E4%BB%A3%E7%90%86.PNG" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
-<p>使用代理服务器<br>地址<code>127.0.0.1</code>端口填trojan客户端填的<code>local_port</code></p>
-<p>下面一栏填入</p>
-<pre class="line-numbers language-none"><code class="language-none">localhost;127.*;10.*;172.16.*;172.17.*;172.18.*;172.19.*;172.20.*;172.21.*;172.22.*;172.23.*;172.24.*;172.25.*;172.26.*;172.27.*;172.28.*;172.29.*;172.30.*;172.31.*;172.32.*;192.168.*<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>请勿将代理服务器用于本地（Intranet）地址<strong>选上</strong><br>最后保存</p>
-<h3 id="有v2rayN客户端的"><a href="#有v2rayN客户端的" class="headerlink" title="有v2rayN客户端的"></a>有v2rayN客户端的</h3><p>在v2rayN上添加Socks服务器<br>服务器地址填<code>127.0.0.1</code>,服务器端口填你上面填的端口，别名trojan，然后保存就可以使用了</p>
+<h1 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h1><p>  用这种方法我的硬盘由于是自带休眠的，所以依旧能正常休眠</p>
+<p><strong>但是</strong></p>
+<p>  过段时间它会被ls指令唤醒，只是唤醒后不会转，只有指示灯亮，硬盘应该不会由过多磨损</p>
 
       </div>
       <div class="post-tags-categories">
         
         <div class="tags">
           
-            <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="">
-              科学上网
+            <a href="/tags/N1/" class="">
+              N1
             </a>
           
-            <a href="/tags/Trojan%E4%BB%A3%E7%90%86/" class="">
-              Trojan代理
+            <a href="/tags/Armbian/" class="">
+              Armbian
             </a>
           
         </div>
@@ -926,7 +805,7 @@ server &#123;
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2020/07/12/Trojan代理搭建/" target="_blank" title="Trojan代理搭建">https://www.whitemoon.top/2020/07/12/Trojan代理搭建/</a>
+    <a href="/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/" target="_blank" title="N1掉盘暂时性解决办法">https://www.whitemoon.top/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -948,19 +827,16 @@ server &#123;
   <div class="post-nav-prev post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/15.jpg" class="lazyload placeholder" data-srcset="/medias/15.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" alt="">
     </div>
-    <a href="/2020/10/13/Hexo-GitHub-Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-nav-link">
+    <a href="/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/" class="post-nav-link">
       <div class="title">
         <i class="fas fa-angle-left"></i> 上一篇:
-        <div class="title-text">Hexo+GitHub Page搭建个人博客</div>
+        <div class="title-text">vue实现语言识别与录音</div>
       </div>
       
       <!-- <div class="content">
-        记一次使用Github Page和hexo搭建个人博客我用到的工具：
-
-PicGo:图床管理,github下载
-Shar
+        
       </div> -->
     </a>
   </div>
@@ -971,15 +847,33 @@ Shar
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/7.jpg" class="lazyload placeholder" data-srcset="/medias/7.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/2.jpg" class="lazyload placeholder" data-srcset="/medias/2.jpg" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp" src="" alt="">
     </div>
-    <a href="/2020/07/11/hello-world/" class="post-nav-link">
+    <a href="/2020/10/13/hexo-nextt-zhu-ti-bo-ke-mei-hua/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fas fa-angle-right"></i>
-        <div class="title-text">Hello World</div>
+        <div class="title-text">Hexo NextT主题博客美化</div>
       </div>
       <!-- <div class="content">
-        Welcome to Hexo! This is your very first post. Check documen
+        环境
+
+
+name
+version
+
+
+
+Git
+2.27.0
+
+
+Node
+12.19.0
+
+
+npm
+6.14.8
+
       </div> -->
     </a>
   </div>
@@ -1098,8 +992,19 @@ Shar
 
   <div id="myComment">
     
-      <div id="gitment-container"></div>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk@1.7.2/dist/gitalk.css">
+<div id="gitalk-container"></div>
 
+<style>
+    .gt-container .gt-meta {
+        z-index: 2;
+    }
+    .gt-container .gt-header-comment {
+        width:100%;
+        box-sizing: border-box;
+        margin-left: 0;
+    }
+</style>
     
   </div>
 
@@ -1984,68 +1889,27 @@ Shar
 <!-- 评论所需js -->
 
   
-    <script type="text/javascript">
-  var utteranceCommon = {};
-
-  function check_utterance() {
-    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
-    if (isDark) {
-      utteranceCommon.Theme = 'github-dark';
-    } else {
-      utteranceCommon.Theme = 'github-light';
-    }
-
-    return document.getElementById("gitment-container");
-  }
-  comment_el = '#gitment-container';
-  load_utterance = function () {
+    <script src="https://unpkg.com/gitalk@1.7.2/dist/gitalk.min.js"></script>
+<script type="text/javascript">
+  comment_el = '#gitalk-container';
+  load_gitalk = function () {
     if ($(comment_el).length) {
-      // 匿名函数，防止污染全局变量
-      const HEAD = check_utterance();
-
-      var utterances = document.createElement('script');
-      utterances.type = 'text/javascript';
-      utterances.async = true;
-      utterances.setAttribute('issue-term', 'pathname')
-      utterances.setAttribute('theme', utteranceCommon.Theme)
-      utterances.setAttribute('repo', '')
-      utterances.crossorigin = 'anonymous';
-      utterances.src = 'https://utteranc.es/client.js';
-      // content 是要插入评论的地方
-      document.getElementById('gitment-container').appendChild(utterances);
-
+      var gitalk = new Gitalk({
+        clientID: 'c3bc0d0c3b249f68bfc4',
+        clientSecret: 'b246d792117de78be4156a879bf5e3489b7a2de2',
+        id: window.location.pathname,
+        repo: 'TalkData',
+        owner: 'zqzess',
+        admin: ['zqzess']
+      })
+      gitalk.render('gitalk-container')
     }
   }
-
-  function dark_utterance() {
-    const HEAD = check_utterance();
-    if (!HEAD) return;
-    const message = {
-      type: 'set-theme',
-      theme: utteranceCommon.Theme
-    };
-    const utteranceIframe = document.querySelector('iframe');
-    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
-  }
-
-  $(document).ready(load_utterance);
+  $(document).ready(load_gitalk);
   document.addEventListener('pjax:complete', function () {
-    load_utterance();
+    load_gitalk();
   });
-
-  $('.dark').click(function () {
-    setTimeout(() => {
-      dark_utterance();
-    });
-  })
-
 </script>
-
-<style>
-  .utterances {
-    max-width: inherit !important;
-  }
-</style>
   
 
 

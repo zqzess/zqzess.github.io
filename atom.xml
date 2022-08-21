@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>117</title>
+  
+  <subtitle>尚余发否</subtitle>
+  <link href="https://www.whitemoon.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.whitemoon.top/"/>
+  <updated>2022-08-21T05:38:24.745Z</updated>
+  <id>https://www.whitemoon.top/</id>
+  
+  <author>
+    <name>zqzess</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue实现语言识别与录音</title>
+    <link href="https://www.whitemoon.top/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/"/>
+    <id>https://www.whitemoon.top/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/</id>
+    <published>2022-08-21T02:36:35.000Z</published>
+    <updated>2022-08-21T05:38:24.745Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>N1掉盘暂时性解决办法</title>
+    <link href="https://www.whitemoon.top/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/"/>
+    <id>https://www.whitemoon.top/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/</id>
+    <published>2021-01-27T14:20:41.000Z</published>
+    <updated>2021-02-10T04:19:25.203Z</updated>
+    
+    
+    <summary type="html">N1掉盘暂时性解决办法</summary>
+    
+    
+    
+    <category term="Armbian" scheme="https://www.whitemoon.top/categories/Armbian/"/>
+    
+    <category term="N1" scheme="https://www.whitemoon.top/categories/Armbian/N1/"/>
+    
+    
+    <category term="N1" scheme="https://www.whitemoon.top/tags/N1/"/>
+    
+    <category term="Armbian" scheme="https://www.whitemoon.top/tags/Armbian/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo NextT主题博客美化</title>
+    <link href="https://www.whitemoon.top/2020/10/13/hexo-nextt-zhu-ti-bo-ke-mei-hua/"/>
+    <id>https://www.whitemoon.top/2020/10/13/hexo-nextt-zhu-ti-bo-ke-mei-hua/</id>
+    <published>2020-10-13T13:54:01.000Z</published>
+    <updated>2021-02-10T03:26:43.781Z</updated>
+    
+    
+    <summary type="html">由于我使用的NextT版本是7.8比较新，从7.3开始删除了好多东西，而网上很多教程都无法使用了，所以分享并记录一下我自己的美化过程</summary>
+    
+    
+    
+    <category term="博客" scheme="https://www.whitemoon.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Hexo" scheme="https://www.whitemoon.top/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.whitemoon.top/tags/Hexo/"/>
+    
+    <category term="博客" scheme="https://www.whitemoon.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo+GitHub Page搭建个人博客</title>
+    <link href="https://www.whitemoon.top/2020/10/13/hexo-github-page-da-jian-ge-ren-bo-ke/"/>
+    <id>https://www.whitemoon.top/2020/10/13/hexo-github-page-da-jian-ge-ren-bo-ke/</id>
+    <published>2020-10-12T19:45:36.000Z</published>
+    <updated>2021-02-09T14:41:01.255Z</updated>
+    
+    
+    <summary type="html">使用免费的Github Page和Hexo搭建个人博客，选用next主题</summary>
+    
+    
+    
+    <category term="博客" scheme="https://www.whitemoon.top/categories/%E5%8D%9A%E5%AE%A2/"/>
+    
+    <category term="Hexo" scheme="https://www.whitemoon.top/categories/%E5%8D%9A%E5%AE%A2/Hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://www.whitemoon.top/tags/Hexo/"/>
+    
+    <category term="GitHub Page" scheme="https://www.whitemoon.top/tags/GitHub-Page/"/>
+    
+    <category term="博客" scheme="https://www.whitemoon.top/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trojan代理搭建</title>
+    <link href="https://www.whitemoon.top/2020/07/12/trojan-dai-li-da-jian/"/>
+    <id>https://www.whitemoon.top/2020/07/12/trojan-dai-li-da-jian/</id>
+    <published>2020-07-12T06:41:41.000Z</published>
+    <updated>2021-02-10T03:15:09.846Z</updated>
+    
+    
+    <summary type="html">新兴代理协议Trojan + nginx的搭建过程</summary>
+    
+    
+    
+    <category term="科学上网" scheme="https://www.whitemoon.top/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    
+    <category term="科学上网" scheme="https://www.whitemoon.top/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="Trojan代理" scheme="https://www.whitemoon.top/tags/Trojan%E4%BB%A3%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.whitemoon.top/2020/07/11/hello-world/"/>
+    <id>https://www.whitemoon.top/2020/07/11/hello-world/</id>
+    <published>2020-07-11T04:41:41.000Z</published>
+    <updated>2022-08-21T02:31:28.395Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
