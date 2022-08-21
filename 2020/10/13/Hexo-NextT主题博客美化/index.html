@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo NextT主题博客美化 | 117</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="由于我使用的NextT版本是7.8比较新，从7.3开始删除了好多东西，而网上很多教程都无法使用了，所以分享并记录一下我自己的美化过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo NextT主题博客美化">
+<meta property="og:url" content="https://www.whitemoon.top/2020/10/13/Hexo-NextT%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/index.html">
+<meta property="og:site_name" content="117">
+<meta property="og:description" content="由于我使用的NextT版本是7.8比较新，从7.3开始删除了好多东西，而网上很多教程都无法使用了，所以分享并记录一下我自己的美化过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-10-13T13:54:01.000Z">
+<meta property="article:modified_time" content="2021-02-10T03:26:43.781Z">
+<meta property="article:author" content="zqzess">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="博客">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="117" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">117</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">尚余发否</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://www.whitemoon.top"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Hexo-NextT主题博客美化" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2020/10/13/Hexo-NextT%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" class="article-date">
+  <time class="dt-published" datetime="2020-10-13T13:54:01.000Z" itemprop="datePublished">2020-10-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a>►<a class="article-category-link" href="/categories/%E5%8D%9A%E5%AE%A2/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Hexo NextT主题博客美化
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><table>
+<thead>
+<tr>
+<th>name</th>
+<th>version</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Git</td>
+<td>2.27.0</td>
+</tr>
+<tr>
+<td>Node</td>
+<td>12.19.0</td>
+</tr>
+<tr>
+<td>npm</td>
+<td>6.14.8</td>
+</tr>
+<tr>
+<td>hexo</td>
+<td>5.2.0</td>
+</tr>
+<tr>
+<td>hexo-cli</td>
+<td>4.2.0</td>
+</tr>
+<tr>
+<td>NextT</td>
+<td>7.8.0</td>
+</tr>
+</tbody></table>
+<h2 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h2><p>在 Hexo 中有两份主要的配置文件，其名称都是 _config.yml。 其中，一份位于站点根目录下，主要包含 Hexo 本身的配置；另一份位于主题目录下，这份配置由主题作者提供，主要用于配置主题相关的选项。</p>
+<p><strong>前者一般称为 站点配置文件， 后者称为 主题配置文件</strong></p>
+<h2 id="下载主题"><a href="#下载主题" class="headerlink" title="下载主题"></a>下载主题</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir themes/next</span><br><span class="line">curl -L https://api.github.com/repos/theme-next/hexo-theme-next/tarball/v7.8.0 | tar -zxv -C themes/next --strip-components=1</span><br></pre></td></tr></table></figure>
+<p>更多安装方法请参考<a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/INSTALLATION.md">官方github说明</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p><a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/README.md">NextT中文Readme.md</a></p>
+<h2 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h2><p>下载好后在打开<strong>站点配置文件</strong>,在最后几行找到<code>theme</code>字段，并将值改为<code>next</code></p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment"># Plugins: hexo-generate-feed</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line"><span class="attr">theme:</span> <span class="string">next</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="设置语言"><a href="#设置语言" class="headerlink" title="设置语言"></a>设置语言</h2><p>编辑<strong>站点配置文件</strong>,更改<code>language</code>值</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">language:</span> <span class="string">zh-Hans</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="选择主题样式Scheme"><a href="#选择主题样式Scheme" class="headerlink" title="选择主题样式Scheme"></a>选择主题样式Scheme</h2><p>Scheme 是 NexT 提供的一种特性，借助于 Scheme，NexT 为你提供多种不同的外观。同时，几乎所有的配置都可以 在 Scheme 之间共用。目前 NexT 支持四种 Scheme</p>
+<ul>
+<li>Muse - 默认 Scheme，上下布局，这是 NexT 最初的版本，黑白主调，大量留白</li>
+<li>Mist - Muse 的紧凑版本，整洁有序的单栏外观</li>
+<li>Pisces - 双栏 Scheme，小家碧玉似的清新</li>
+<li>Gemini</li>
+</ul>
+<p>Scheme 的切换通过更改<strong>主题配置文件</strong>，搜索 scheme 关键字，将你需用启用的 scheme 前面注释 # 去除即可</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"><span class="comment"># Scheme Settings</span></span><br><span class="line"><span class="comment"># ---------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Schemes</span></span><br><span class="line"><span class="comment"># scheme: Muse</span></span><br><span class="line"><span class="attr">scheme:</span> <span class="string">Mist</span></span><br><span class="line"><span class="comment"># scheme: Pisces</span></span><br><span class="line"><span class="comment"># scheme: Gemini</span></span><br></pre></td></tr></table></figure>
+<h2 id="基本信息配置"><a href="#基本信息配置" class="headerlink" title="基本信息配置"></a>基本信息配置</h2><p>打开<strong>站点配置文件</strong> ，找到Site模块</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span>      <span class="comment">#标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span>    <span class="comment">#副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;&#x27;</span>    <span class="comment">#描述</span></span><br><span class="line"><span class="attr">keywords:</span>     <span class="comment">#关键词</span></span><br><span class="line"><span class="attr">author:</span>     <span class="comment">#作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span>    <span class="comment">#语言</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="未完待续"><a href="#未完待续" class="headerlink" title="未完待续"></a>未完待续</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://www.whitemoon.top/2020/10/13/Hexo-NextT%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/" data-id="cl72pr22n0000sqp71cvna5ux" data-title="Hexo NextT主题博客美化" class="article-share-link">分享</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">前一篇</strong>
+      <div class="article-nav-title">
+        
+          N1掉盘暂时性解决办法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/10/13/Hexo-GitHub-Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">Hexo+GitHub Page搭建个人博客</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Armbian/">Armbian</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Armbian/N1/">N1</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/">博客</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/Hexo/">Hexo</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">科学上网</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Armbian/" rel="tag">Armbian</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub-Page/" rel="tag">GitHub Page</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/N1/" rel="tag">N1</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Trojan%E4%BB%A3%E7%90%86/" rel="tag">Trojan代理</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" rel="tag">科学上网</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Armbian/" style="font-size: 10px;">Armbian</a> <a href="/tags/GitHub-Page/" style="font-size: 10px;">GitHub Page</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/N1/" style="font-size: 10px;">N1</a> <a href="/tags/Trojan%E4%BB%A3%E7%90%86/" style="font-size: 10px;">Trojan代理</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 20px;">博客</a> <a href="/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" style="font-size: 10px;">科学上网</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">一月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/27/N1%E6%8E%89%E7%9B%98%E6%9A%82%E6%97%B6%E6%80%A7%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">N1掉盘暂时性解决办法</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/13/Hexo-NextT%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/">Hexo NextT主题博客美化</a>
+          </li>
+        
+          <li>
+            <a href="/2020/10/13/Hexo-GitHub-Page%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Hexo+GitHub Page搭建个人博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/12/Trojan%E4%BB%A3%E7%90%86%E6%90%AD%E5%BB%BA/">Trojan代理搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2020/07/11/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 zqzess<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
