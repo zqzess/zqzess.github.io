@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.whitemoon.top/me/index.html</loc>
+    
+    <lastmod>2022-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.whitemoon.top/gallery/index.html</loc>
+    
+    <lastmod>2022-08-21</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.whitemoon.top/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/</loc>
     
     <lastmod>2022-08-21</lastmod>
@@ -144,13 +162,6 @@
   </url>
   
   <url>
-    <loc>https://www.whitemoon.top/tags/GitHub-Page/</loc>
-    <lastmod>2022-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.whitemoon.top/tags/%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2022-08-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -185,6 +196,13 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.whitemoon.top/tags/GitHub-Page/</loc>
+    <lastmod>2022-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
@@ -202,6 +220,13 @@
   </url>
   
   <url>
+    <loc>https://www.whitemoon.top/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
+    <lastmod>2022-08-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.whitemoon.top/categories/%E5%8D%9A%E5%AE%A2/Hexo/</loc>
     <lastmod>2022-08-21</lastmod>
     <changefreq>weekly</changefreq>
@@ -210,13 +235,6 @@
   
   <url>
     <loc>https://www.whitemoon.top/categories/Armbian/N1/</loc>
-    <lastmod>2022-08-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.whitemoon.top/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/</loc>
     <lastmod>2022-08-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
