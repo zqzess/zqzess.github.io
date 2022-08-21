@@ -992,19 +992,8 @@ npm
 
   <div id="myComment">
     
-      <link rel="stylesheet" href="https://unpkg.com/gitalk@1.7.2/dist/gitalk.css">
-<div id="gitalk-container"></div>
+      <div id="gitment-container"></div>
 
-<style>
-    .gt-container .gt-meta {
-        z-index: 2;
-    }
-    .gt-container .gt-header-comment {
-        width:100%;
-        box-sizing: border-box;
-        margin-left: 0;
-    }
-</style>
     
   </div>
 
@@ -1889,27 +1878,68 @@ npm
 <!-- 评论所需js -->
 
   
-    <script src="https://unpkg.com/gitalk@1.7.2/dist/gitalk.min.js"></script>
-<script type="text/javascript">
-  comment_el = '#gitalk-container';
-  load_gitalk = function () {
+    <script type="text/javascript">
+  var utteranceCommon = {};
+
+  function check_utterance() {
+    let isDark = JSON.parse(localStorage.getItem('dark')) || JSON.parse('false');
+    if (isDark) {
+      utteranceCommon.Theme = 'github-dark';
+    } else {
+      utteranceCommon.Theme = 'github-light';
+    }
+
+    return document.getElementById("gitment-container");
+  }
+  comment_el = '#gitment-container';
+  load_utterance = function () {
     if ($(comment_el).length) {
-      var gitalk = new Gitalk({
-        clientID: 'c3bc0d0c3b249f68bfc4',
-        clientSecret: 'b246d792117de78be4156a879bf5e3489b7a2de2',
-        id: window.location.pathname,
-        repo: 'TalkData',
-        owner: 'zqzess',
-        admin: ['zqzess']
-      })
-      gitalk.render('gitalk-container')
+      // 匿名函数，防止污染全局变量
+      const HEAD = check_utterance();
+
+      var utterances = document.createElement('script');
+      utterances.type = 'text/javascript';
+      utterances.async = true;
+      utterances.setAttribute('issue-term', 'pathname')
+      utterances.setAttribute('theme', utteranceCommon.Theme)
+      utterances.setAttribute('repo', 'zqzess/zqzess.github.io')
+      utterances.crossorigin = 'anonymous';
+      utterances.src = 'https://utteranc.es/client.js';
+      // content 是要插入评论的地方
+      document.getElementById('gitment-container').appendChild(utterances);
+
     }
   }
-  $(document).ready(load_gitalk);
+
+  function dark_utterance() {
+    const HEAD = check_utterance();
+    if (!HEAD) return;
+    const message = {
+      type: 'set-theme',
+      theme: utteranceCommon.Theme
+    };
+    const utteranceIframe = document.querySelector('iframe');
+    utteranceIframe.contentWindow.postMessage(message, 'https://utteranc.es');
+  }
+
+  $(document).ready(load_utterance);
   document.addEventListener('pjax:complete', function () {
-    load_gitalk();
+    load_utterance();
   });
+
+  $('.dark').click(function () {
+    setTimeout(() => {
+      dark_utterance();
+    });
+  })
+
 </script>
+
+<style>
+  .utterances {
+    max-width: inherit !important;
+  }
+</style>
   
 
 
