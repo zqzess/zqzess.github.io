@@ -674,18 +674,18 @@
                 </a>
                 
                 
-                <a href="/tags/GitHub-Page/" title="GitHub Page: 1">
-                    <span class="tag-content"
-                        title="GitHub Page" style="background-color: #F9E79F;">GitHub Page
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
                 <a href="/tags/%E5%8D%9A%E5%AE%A2/" title="博客: 2">
                     <span class="tag-content"
                         title="博客" style="background-color: #F8F9F9;">博客
                         <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/GitHub-Page/" title="GitHub Page: 1">
+                    <span class="tag-content"
+                        title="GitHub Page" style="background-color: #F9E79F;">GitHub Page
+                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -1205,6 +1205,31 @@
 
 
 <!-- 卡片滚动动画 -->
+
+    <script type="text/javascript">
+  loadScript("https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.reveal', {
+      distance: '120px',
+      duration: '400',
+      interval: '30',
+      scale: '1',
+      origin: 'bottom', // 动画开始的方向
+      easing: 'ease'
+    });
+  }
+  $(function () {
+    var checkScrollReveal = setInterval(function () {
+      if ($("#safearea").css("display") != "block") return
+      if (typeof ScrollReveal == "undefined") return
+      clearInterval(checkScrollReveal)
+      pjax_scrollrebeal();
+    }, 100)
+  });
+  document.addEventListener('pjax:complete', function () {
+    pjax_scrollrebeal();
+  })
+</script>
    
 
 <!-- 评论所需js -->

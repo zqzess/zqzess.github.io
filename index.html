@@ -2084,7 +2084,7 @@ Nodej
         <div class="webinfo-item">
           <div>最后活动时间：</div>
           
-            <div id="last-update" style="display: none;">Sun Aug 21 2022 15:25:18 GMT+0800 (China Standard Time)</div>
+            <div id="last-update" style="display: none;">Sun Aug 21 2022 16:03:46 GMT+0800 (China Standard Time)</div>
             <div id="last-update-show">2022-08-21 日</div>
           
         </div>
@@ -2150,16 +2150,6 @@ Nodej
 </div>
 <!-- 花瓣和雪花飘落 -->
 <!-- 雪花和花瓣特效 -->
-
-  
-    <script type="text/javascript">
-      //只在桌面版网页启用特效
-      var windowWidth = $(window).width();
-      if (windowWidth > 768) {
-        loadScript('/js/falling/sakura.js');
-      }
-    </script>
-  
 
 
 
@@ -2645,6 +2635,31 @@ Nodej
 
 
 <!-- 卡片滚动动画 -->
+
+    <script type="text/javascript">
+  loadScript("https://unpkg.com/scrollreveal@4.0.6/dist/scrollreveal.min.js")
+  function pjax_scrollrebeal() {
+    ScrollReveal().reveal('.reveal', {
+      distance: '120px',
+      duration: '400',
+      interval: '30',
+      scale: '1',
+      origin: 'bottom', // 动画开始的方向
+      easing: 'ease'
+    });
+  }
+  $(function () {
+    var checkScrollReveal = setInterval(function () {
+      if ($("#safearea").css("display") != "block") return
+      if (typeof ScrollReveal == "undefined") return
+      clearInterval(checkScrollReveal)
+      pjax_scrollrebeal();
+    }, 100)
+  });
+  document.addEventListener('pjax:complete', function () {
+    pjax_scrollrebeal();
+  })
+</script>
    
 
 <!-- 评论所需js -->
