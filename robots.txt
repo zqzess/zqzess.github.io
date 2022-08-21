@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+Allow: /home/
+Allow: /about/
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
+
+Sitemap: http://www.whitemoon.top/sitemap.xml
+Sitemap: http://www.whitemoon.top/baidusitemap.xml
