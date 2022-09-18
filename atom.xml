@@ -6,7 +6,7 @@
   <link href="https://www.whitemoon.top/atom.xml" rel="self"/>
   
   <link href="https://www.whitemoon.top/"/>
-  <updated>2022-08-30T02:08:39.781Z</updated>
+  <updated>2022-09-18T13:43:19.696Z</updated>
   <id>https://www.whitemoon.top/</id>
   
   <author>
@@ -17,11 +17,34 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>自建的代理节点转换站点</title>
+    <link href="https://www.whitemoon.top/2022/09/18/zi-jian-de-dai-li-jie-dian-zhuan-huan-zhan-dian/"/>
+    <id>https://www.whitemoon.top/2022/09/18/zi-jian-de-dai-li-jie-dian-zhuan-huan-zhan-dian/</id>
+    <published>2022-09-18T06:58:39.000Z</published>
+    <updated>2022-09-18T13:43:19.696Z</updated>
+    
+    
+    <summary type="html">利用Sub-Store搭建自己的代理节点转换站</summary>
+    
+    
+    
+    <category term="科学上网" scheme="https://www.whitemoon.top/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="自建代理转换" scheme="https://www.whitemoon.top/categories/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/%E8%87%AA%E5%BB%BA%E4%BB%A3%E7%90%86%E8%BD%AC%E6%8D%A2/"/>
+    
+    
+    <category term="科学上网" scheme="https://www.whitemoon.top/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/"/>
+    
+    <category term="代理转换" scheme="https://www.whitemoon.top/tags/%E4%BB%A3%E7%90%86%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
     <title>vue实现语言识别与录音</title>
     <link href="https://www.whitemoon.top/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/"/>
     <id>https://www.whitemoon.top/2022/08/21/vue-shi-xian-yu-yan-shi-bie-yu-lu-yin/</id>
     <published>2022-08-21T02:36:35.000Z</published>
-    <updated>2022-08-30T02:08:39.781Z</updated>
+    <updated>2022-08-30T02:08:40.000Z</updated>
     
     
     <summary type="html">基于web原生api实现语音转文字以及录音</summary>
@@ -40,14 +63,14 @@
   </entry>
   
   <entry>
-    <title>N1掉盘暂时性解决办法</title>
-    <link href="https://www.whitemoon.top/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/"/>
-    <id>https://www.whitemoon.top/2021/01/27/n1-diao-pan-zan-shi-xing-jie-jue-ban-fa/</id>
+    <title>N1掉盘临时解决办法</title>
+    <link href="https://www.whitemoon.top/2021/01/27/n1-diao-pan-lin-shi-jie-jue-ban-fa/"/>
+    <id>https://www.whitemoon.top/2021/01/27/n1-diao-pan-lin-shi-jie-jue-ban-fa/</id>
     <published>2021-01-27T14:20:41.000Z</published>
-    <updated>2021-02-10T04:19:25.203Z</updated>
+    <updated>2022-09-18T06:56:00.653Z</updated>
     
     
-    <summary type="html">N1掉盘暂时性解决办法</summary>
+    <summary type="html">N1掉盘临时解决办法</summary>
     
     
     
@@ -67,7 +90,7 @@
     <link href="https://www.whitemoon.top/2020/10/13/hexo-nextt-zhu-ti-bo-ke-mei-hua/"/>
     <id>https://www.whitemoon.top/2020/10/13/hexo-nextt-zhu-ti-bo-ke-mei-hua/</id>
     <published>2020-10-13T13:54:01.000Z</published>
-    <updated>2021-02-10T03:26:43.781Z</updated>
+    <updated>2021-02-10T03:26:44.000Z</updated>
     
     
     <summary type="html">由于我使用的NextT版本是7.8比较新，从7.3开始删除了好多东西，而网上很多教程都无法使用了，所以分享并记录一下我自己的美化过程</summary>
@@ -90,7 +113,7 @@
     <link href="https://www.whitemoon.top/2020/10/13/hexo-github-page-da-jian-ge-ren-bo-ke/"/>
     <id>https://www.whitemoon.top/2020/10/13/hexo-github-page-da-jian-ge-ren-bo-ke/</id>
     <published>2020-10-12T19:45:36.000Z</published>
-    <updated>2021-02-09T14:41:01.255Z</updated>
+    <updated>2021-02-09T14:41:02.000Z</updated>
     
     
     <summary type="html">使用免费的Github Page和Hexo搭建个人博客，选用next主题</summary>
@@ -115,7 +138,7 @@
     <link href="https://www.whitemoon.top/2020/07/12/trojan-dai-li-da-jian/"/>
     <id>https://www.whitemoon.top/2020/07/12/trojan-dai-li-da-jian/</id>
     <published>2020-07-12T06:41:41.000Z</published>
-    <updated>2021-02-10T03:15:09.846Z</updated>
+    <updated>2021-02-10T03:15:10.000Z</updated>
     
     
     <summary type="html">新兴代理协议Trojan + nginx的搭建过程</summary>
@@ -136,7 +159,7 @@
     <link href="https://www.whitemoon.top/2020/07/11/hello-world/"/>
     <id>https://www.whitemoon.top/2020/07/11/hello-world/</id>
     <published>2020-07-11T04:41:41.000Z</published>
-    <updated>2022-08-21T02:31:28.395Z</updated>
+    <updated>2022-08-21T02:31:28.000Z</updated>
     
     
       
