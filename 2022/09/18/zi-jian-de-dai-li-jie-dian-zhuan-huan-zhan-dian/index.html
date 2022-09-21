@@ -711,11 +711,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> 字数统计: 1.8k |
+            <i class="fas fa-file-text-o"></i> 字数统计: 2.4k |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> 阅读时长: 8分钟 |
+            <i class="fas fa-clock"></i> 阅读时长: 11分钟 |
           </span>
   
           
@@ -1017,6 +1017,121 @@
 <p>至此已经全部结束，接下来就是打包发布并部署服务器</p>
 <h3 id="前端打包"><a href="#前端打包" class="headerlink" title="前端打包"></a>前端打包</h3><p>在根目录下进入终端命令，执行&#96;&#96;pnpm build&#96;，然后等待其打包好</p>
 <p>打包好后，根目录会多出dist文件夹，此文件夹就是打包好的网站文件，也是我们需要发布服务器的<br><img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209182143647.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209182143647.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h2 id="上传服务器并配置启动后端"><a href="#上传服务器并配置启动后端" class="headerlink" title="上传服务器并配置启动后端"></a>上传服务器并配置启动后端</h2><p>在服务器上找一个文件夹存放前后端文件<br><img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211904460.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211904460.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br>这是我的前端存放目录</p>
+<p>再找一个文件夹把后端项目里的backend文件夹上传<br><img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211909784.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211909784.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"><br>这是我的后端存放目录</p>
+<p>命令行进入后端存放目录，执行<code>pnpm i</code></p>
+<p>完成后再执行<code>pm2 start /home/Sub-Store-new/backend/sub-store.min.js</code>，完成后继续执行<code>pm2 save</code>,如果成功，至此后端已经成功启动<br><img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211913984.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211913984.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<p><strong>pm2需要先安装好</strong></p>
+<h2 id="配置Nginx"><a href="#配置Nginx" class="headerlink" title="配置Nginx"></a>配置Nginx</h2><pre class="line-numbers language-conf" data-language="conf"><code class="language-conf"># For more information on configuration, see:
+#   * Official English Documentation: http:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;
+#   * Official Russian Documentation: http:&#x2F;&#x2F;nginx.org&#x2F;ru&#x2F;docs&#x2F;
+
+user nginx;
+worker_processes auto;
+error_log &#x2F;var&#x2F;log&#x2F;nginx&#x2F;error.log;
+pid &#x2F;run&#x2F;nginx.pid;
+
+# Load dynamic modules. See &#x2F;usr&#x2F;share&#x2F;doc&#x2F;nginx&#x2F;README.dynamic.
+include &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;modules&#x2F;*.conf;
+
+events &#123;
+    worker_connections 1024;
+&#125;
+
+stream &#123;
+    # 这里就是 SNI 识别，将域名映射成一个配置名，请修改自己的一级域名
+    map $ssl_preread_server_name $backend_name &#123;
+        sub.whitemoon.top sub;
+    # 域名都不匹配情况下的默认值
+        default web;
+    &#125;
+    upstream sub &#123;
+        server 127.0.0.1:10244;
+    &#125;
+    # 监听 443 并开启 ssl_preread
+    server &#123;
+        listen 443 reuseport;
+        listen [::]:443 reuseport;
+        proxy_pass $backend_name;
+        ssl_preread on;
+    &#125;
+
+&#125;
+http &#123;
+    log_format  main  &#39;$remote_addr - $remote_user [$time_local] &quot;$request&quot; &#39;
+                      &#39;$status $body_bytes_sent &quot;$http_referer&quot; &#39;
+                      &#39;&quot;$http_user_agent&quot; &quot;$http_x_forwarded_for&quot;&#39;;
+
+    access_log  &#x2F;var&#x2F;log&#x2F;nginx&#x2F;access.log  main;
+
+    sendfile            on;
+    tcp_nopush          on;
+    tcp_nodelay         on;
+    keepalive_timeout   65;
+    types_hash_max_size 2048;
+
+    include             &#x2F;etc&#x2F;nginx&#x2F;mime.types;
+    default_type        application&#x2F;octet-stream;
+
+    # Load modular configuration files from the &#x2F;etc&#x2F;nginx&#x2F;conf.d directory.
+    # See http:&#x2F;&#x2F;nginx.org&#x2F;en&#x2F;docs&#x2F;ngx_core_module.html#include
+    # for more information.
+    include &#x2F;etc&#x2F;nginx&#x2F;conf.d&#x2F;*.conf;
+
+server &#123;
+    # 开启 HTTP2 支持
+    listen 10244 ssl http2;
+    server_name  sub.zqzess.com;
+    # root  &#x2F;home&#x2F;Sub-Store-new&#x2F;web&#x2F;dist;
+    # index index.html;
+
+    gzip on;
+    gzip_http_version 1.1;
+    gzip_vary on;
+    gzip_comp_level 6;
+    gzip_proxied any;
+    gzip_types text&#x2F;plain text&#x2F;css application&#x2F;json application&#x2F;javascript application&#x2F;x-javascript text&#x2F;javascript;
+
+    ssl_protocols TLSv1.2 TLSv1.3;
+    ssl_certificate      &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;key&#x2F;1_sub.zqzess.com_bundle.crt;
+    ssl_certificate_key  &#x2F;usr&#x2F;share&#x2F;nginx&#x2F;key&#x2F;2_sub.zqzess.com.key;
+    ssl_session_cache    shared:SSL:10m;
+    ssl_session_timeout  5m;
+    ssl_ciphers  HIGH:!aNULL:!MD5;
+    ssl_prefer_server_ciphers  on;
+
+    # # WS 协议转发
+    # location &#x2F;fTY9Bx7c &#123;
+    #     proxy_redirect off;
+    #     proxy_http_version 1.1;
+    #     proxy_set_header Upgrade $http_upgrade;
+    #     proxy_set_header Connection &quot;upgrade&quot;;
+    #     proxy_set_header Host $http_host;
+    #     proxy_pass http:&#x2F;&#x2F;127.0.0.1:16881;
+    # &#125;
+
+    # location &#x2F; &#123;
+    #    proxy_pass http:&#x2F;&#x2F;127.0.0.1:3000;
+    # &#125;
+
+  location &#x2F; &#123;
+    root &#x2F;home&#x2F;Sub-Store-new&#x2F;web&#x2F;dist;
+    index  index.html index.htm;
+    try_files $uri $uri&#x2F; &#x2F;index.html;
+  &#125;
+
+  location &#x2F;api &#123;
+    proxy_pass http:&#x2F;&#x2F;127.0.0.1:3000;
+  &#125;
+
+  location &#x2F;download &#123;
+    proxy_pass http:&#x2F;&#x2F;127.0.0.1:3000;
+  &#125;
+&#125;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="完结"><a href="#完结" class="headerlink" title="完结"></a>完结</h2><p>最后访问自己的域名查看效果<br><img src="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211924407.png" class="lazyload placeholder" data-srcset="https://cdn.jsdelivr.net/gh/zqzess/pichouse@master/pic/202209211924407.png" srcset="https://pic1.zhimg.com/v2-cd38920285d125be80b3eb504052c550_b.webp"></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://github.com/sub-store-org/Sub-Store">Sub-Store</a></p>
 
       </div>
       <div class="post-tags-categories">
