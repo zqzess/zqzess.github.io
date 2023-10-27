@@ -6887,9 +6887,11 @@ pre {
   -moz-transition: all 0.28s ease;
   -o-transition: all 0.28s ease;
   -ms-transition: all 0.28s ease;
+  filter: grayscale(100%);
 }
 .highlight:hover {
   background: var(--color-codeblock);
+  filter: grayscale(0%);
 }
 .highlight:hover figcaption {
   transition: all 0.28s ease;
@@ -7013,4 +7015,1083 @@ pre {
 }
 .iziToast-message {
   word-break: break-all !important;
+}
+.post-TianliGPT {
+  background: #f1f3f8;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  padding: 12px;
+  line-height: 1.3;
+  border: 1px solid #e3e8f7;
+  margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .post-TianliGPT {
+    margin-top: 22px;
+  }
+}
+.tianliGPT-title {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  color: #425aef;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  align-items: center;
+  padding: 0 12px;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.tianliGPT-title-text {
+  font-weight: bold;
+  margin-left: 8px;
+  line-height: 1;
+}
+.tianliGPT-explanation {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #e3e8f7;
+  font-size: 15px;
+  line-height: 1.4;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+.tianliGPT-suggestions {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+.tianliGPT-suggestions .tianliGPT-suggestions-item {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #fff;
+  border-radius: 8px 8px 8px 0;
+  -webkit-border-radius: 8px 8px 8px 0;
+  border: 1px solid #e3e8f7;
+  font-size: 15px;
+  line-height: 1.4;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: fit-content;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
+  background: #425aef;
+  color: #fff;
+}
+.blinking-cursor {
+  background-color: #425aef;
+  width: 10px;
+  height: 16px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block;
+  vertical-align: middle;
+  animation: blinking-cursor 0.5s infinite;
+  -webkit-animation: blinking-cursor 0.5s infinite;
+  -khtml-animation: blinking-cursor 0.5s infinite;
+  -moz-animation: blinking-cursor 0.5s infinite;
+  -o-animation: blinking-cursor 0.5s infinite;
+  -ms-animation: blinking-cursor 0.5s infinite;
+  -webkit-animation: blinking-cursor 0.5s infinite;
+  margin-left: 4px;
+}
+.tianliGPT-tag {
+  font-size: 12px;
+  background-color: #425aef;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left: auto;
+  line-height: 1;
+  padding: 4px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+.tianliGPT-tag:hover {
+  background: #363636;
+  color: #fff;
+}
+ins.adsbygoogle {
+  margin: 16px 0;
+  background: #fff;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e3e8f7;
+}
+#tianliGPT-Toggle {
+  font-size: 12px;
+  background: #425aef;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left: 6px;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -khtml-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  font-weight: bold;
+}
+#tianliGPT-Toggle:hover {
+  background: #363636;
+  color: #fff;
+}
+.tianliGPT-title-icon {
+  width: 20px;
+  height: 20px;
+}
+.tianliGPT-title-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #425aef;
+}
+.tianliGPT-title-icon svg path {
+  fill: #425aef;
+}
+@-moz-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-mode: 'dark';
+  }
+  :root:not([color-scheme]) {
+    --block-hover: #1c1c1c;
+    --text-p1: #fff;
+    --text-p3: #777;
+    --card: #fff;
+  }
+  :root:not([color-scheme]) fa-solid,
+  :root:not([color-scheme]) fa-regular,
+  :root:not([color-scheme]) fa-duotone,
+  :root:not([color-scheme]) fa-light,
+  :root:not([color-scheme]) fa-thin,
+  :root:not([color-scheme]) fal,
+  :root:not([color-scheme]) fad,
+  :root:not([color-scheme]) fa,
+  :root:not([color-scheme]) svg.iconfont,
+  :root:not([color-scheme]) img,
+  :root:not([color-scheme]) .lazyload {
+    filter: brightness(70%) !important;
+  }
+  :root:not([color-scheme]) .widget.blogger .content .social-wrapper a.social:hover {
+    background: var(--color-card);
+  }
+  :root:not([color-scheme]) .widget >.content ul.entry a .badge,
+  :root:not([color-scheme]) .widget >.content ul.popular-posts a .badge {
+    color: unset !important;
+  }
+  :root:not([color-scheme]) .content {
+    color: var(--color-p);
+  }
+  :root:not([color-scheme]) .widget >.content a {
+    color: var(--color-p) !important;
+  }
+  :root:not([color-scheme]) .widget >.content a:hover {
+    color: var(--color-list-hl) !important;
+  }
+  :root:not([color-scheme]) .note {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) div.tabs ul.nav-tabs li.tab.active a {
+    color: var(--color-p);
+    background: var(--color-card);
+  }
+  :root:not([color-scheme]) kbd {
+    background: var(--color-block) !important;
+  }
+  :root:not([color-scheme]) .cover-wrapper.dock .menu .list-h a:hover,
+  :root:not([color-scheme]) .cover-wrapper.featured .menu .list-h a:hover,
+  :root:not([color-scheme]) .cover-wrapper.focus .menu .list-h a:hover {
+    color: var(--color-text) !important;
+  }
+  :root:not([color-scheme]) .gutter {
+    background: var(--color-card) !important;
+    background-color: var(--color-card) !important;
+  }
+  :root:not([color-scheme]) .highlight figcaption {
+    background-color: #14161a;
+  }
+  :root:not([color-scheme]) .highlight pre .line,
+  :root:not([color-scheme]) .highlight pre .params {
+    color: rgba(158,142,142,0.9);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table tr {
+    background-color: var(--color-card);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table th {
+    background: var(--color-site-bg);
+  }
+  :root:not([color-scheme]) *:not(.highlight) table td,
+  :root:not([color-scheme]) *:not(.highlight) table th {
+    border-color: var(--color-site-bg);
+  }
+  :root:not([color-scheme]) *:not(.highlight) >table tr:hover {
+    background: var(--color-codeblock);
+  }
+  :root:not([color-scheme]) .timenode .highlight {
+    border-color: var(--color-site-bg) !important;
+  }
+  :root:not([color-scheme]) blockquote p {
+    color: var(--color-p);
+  }
+  :root:not([color-scheme]) #archive-page .archive .all-tags ul li span {
+    color: var(--color-text);
+    background: #6f6f72;
+  }
+  :root:not([color-scheme]) .btn-copy:hover {
+    background: var(--color-site-body);
+  }
+  :root:not([color-scheme]) .post-TianliGPT {
+    background: #30343f;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    padding: 12px;
+    line-height: 1.3;
+    border: 1px solid #3d3d3f;
+    margin-top: 16px;
+  }
+  :root:not([color-scheme]) .tianliGPT-title {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    color: #f2b94b;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    align-items: center;
+    padding: 0 12px;
+    cursor: default;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  :root:not([color-scheme]) .tianliGPT-title-text {
+    font-weight: bold;
+    margin-left: 8px;
+    line-height: 1;
+  }
+  :root:not([color-scheme]) .tianliGPT-explanation {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #1d1e22;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    border: 1px solid #3d3d3f;
+    font-size: 15px;
+    line-height: 1.4;
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+  :root:not([color-scheme]) .tianliGPT-suggestions {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -khtml-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+  }
+  :root:not([color-scheme]) .tianliGPT-suggestions .tianliGPT-suggestions-item {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: #1d1e22;
+    border-radius: 8px 8px 8px 0;
+    -webkit-border-radius: 8px 8px 8px 0;
+    border: 1px solid #3d3d3f;
+    font-size: 15px;
+    line-height: 1.4;
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    width: fit-content;
+    margin-right: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -khtml-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+  :root:not([color-scheme]) .tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
+    background: #f2b94b;
+    color: #fff;
+  }
+  :root:not([color-scheme]) .blinking-cursor {
+    background-color: #f2b94b;
+    width: 10px;
+    height: 16px;
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: inline-block;
+    vertical-align: middle;
+    animation: blinking-cursor 0.5s infinite;
+    -webkit-animation: blinking-cursor 0.5s infinite;
+    -khtml-animation: blinking-cursor 0.5s infinite;
+    -moz-animation: blinking-cursor 0.5s infinite;
+    -o-animation: blinking-cursor 0.5s infinite;
+    -ms-animation: blinking-cursor 0.5s infinite;
+    -webkit-animation: blinking-cursor 0.5s infinite;
+    margin-left: 4px;
+  }
+  :root:not([color-scheme]) .tianliGPT-tag {
+    font-size: 12px;
+    background-color: #f2b94b;
+    color: #1d1e22;
+    font-weight: bold;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-left: auto;
+    line-height: 1;
+    padding: 4px;
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -khtml-justify-content: center;
+    -moz-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -khtml-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+  }
+  :root:not([color-scheme]) .tianliGPT-tag:hover {
+    background: #f7f7fa;
+    color: #1d1e22;
+  }
+  :root:not([color-scheme]) ins.adsbygoogle {
+    margin: 16px 0;
+    background: #1d1e22;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #3d3d3f;
+  }
+  :root:not([color-scheme]) #tianliGPT-Toggle {
+    font-size: 12px;
+    background: #f2b94b;
+    color: #1d1e22;
+    padding: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    margin-left: 6px;
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -khtml-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    cursor: pointer;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -khtml-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    font-weight: bold;
+  }
+  :root:not([color-scheme]) #tianliGPT-Toggle:hover {
+    background: #f7f7fa;
+    color: #1d1e22;
+  }
+  :root:not([color-scheme]) .tianliGPT-title-icon {
+    width: 20px;
+    height: 20px;
+  }
+  :root:not([color-scheme]) .tianliGPT-title-icon svg {
+    width: 20px;
+    height: 20px;
+    fill: #f2b94b;
+  }
+  :root:not([color-scheme]) .tianliGPT-title-icon svg path {
+    fill: #f2b94b;
+  }
+@-moz-keyframes blinking-cursor {
+    0% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    40% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    90% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+}
+@-webkit-keyframes blinking-cursor {
+    0% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    40% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    90% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+}
+@-o-keyframes blinking-cursor {
+    0% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    40% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    90% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+}
+@keyframes blinking-cursor {
+    0% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    40% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+    50% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    90% {
+      opacity: 0;
+      -webkit-opacity: 0;
+      -moz-opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      -webkit-opacity: 1;
+      -moz-opacity: 1;
+    }
+}
+}
+[color-scheme='dark'] {
+  --block-hover: #1c1c1c;
+  --text-p1: #fff;
+  --text-p3: #777;
+  --card: #fff;
+}
+[color-scheme='dark'] fa-solid,
+[color-scheme='dark'] fa-regular,
+[color-scheme='dark'] fa-duotone,
+[color-scheme='dark'] fa-light,
+[color-scheme='dark'] fa-thin,
+[color-scheme='dark'] fal,
+[color-scheme='dark'] fad,
+[color-scheme='dark'] fa,
+[color-scheme='dark'] svg.iconfont,
+[color-scheme='dark'] img,
+[color-scheme='dark'] .lazyload {
+  filter: brightness(70%) !important;
+}
+[color-scheme='dark'] .widget.blogger .content .social-wrapper a.social:hover {
+  background: var(--color-card);
+}
+[color-scheme='dark'] .widget >.content ul.entry a .badge,
+[color-scheme='dark'] .widget >.content ul.popular-posts a .badge {
+  color: unset !important;
+}
+[color-scheme='dark'] .content {
+  color: var(--color-p);
+}
+[color-scheme='dark'] .widget >.content a {
+  color: var(--color-p) !important;
+}
+[color-scheme='dark'] .widget >.content a:hover {
+  color: var(--color-list-hl) !important;
+}
+[color-scheme='dark'] .note {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] div.tabs ul.nav-tabs li.tab.active a {
+  color: var(--color-p);
+  background: var(--color-card);
+}
+[color-scheme='dark'] kbd {
+  background: var(--color-block) !important;
+}
+[color-scheme='dark'] .cover-wrapper.dock .menu .list-h a:hover,
+[color-scheme='dark'] .cover-wrapper.featured .menu .list-h a:hover,
+[color-scheme='dark'] .cover-wrapper.focus .menu .list-h a:hover {
+  color: var(--color-text) !important;
+}
+[color-scheme='dark'] .gutter {
+  background: var(--color-card) !important;
+  background-color: var(--color-card) !important;
+}
+[color-scheme='dark'] .highlight figcaption {
+  background-color: #14161a;
+}
+[color-scheme='dark'] .highlight pre .line,
+[color-scheme='dark'] .highlight pre .params {
+  color: rgba(158,142,142,0.9);
+}
+[color-scheme='dark'] *:not(.highlight) >table tr {
+  background-color: var(--color-card);
+}
+[color-scheme='dark'] *:not(.highlight) >table th {
+  background: var(--color-site-bg);
+}
+[color-scheme='dark'] *:not(.highlight) table td,
+[color-scheme='dark'] *:not(.highlight) table th {
+  border-color: var(--color-site-bg);
+}
+[color-scheme='dark'] *:not(.highlight) >table tr:hover {
+  background: var(--color-codeblock);
+}
+[color-scheme='dark'] .timenode .highlight {
+  border-color: var(--color-site-bg) !important;
+}
+[color-scheme='dark'] blockquote p {
+  color: var(--color-p);
+}
+[color-scheme='dark'] #archive-page .archive .all-tags ul li span {
+  color: var(--color-text);
+  background: #6f6f72;
+}
+[color-scheme='dark'] .btn-copy:hover {
+  background: var(--color-site-body);
+}
+[color-scheme='dark'] .post-TianliGPT {
+  background: #30343f;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  padding: 12px;
+  line-height: 1.3;
+  border: 1px solid #3d3d3f;
+  margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  [color-scheme='dark'] .post-TianliGPT {
+    margin-top: 22px;
+  }
+}
+[color-scheme='dark'] .tianliGPT-title {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  color: #f2b94b;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  align-items: center;
+  padding: 0 12px;
+  cursor: default;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+[color-scheme='dark'] .tianliGPT-title-text {
+  font-weight: bold;
+  margin-left: 8px;
+  line-height: 1;
+}
+[color-scheme='dark'] .tianliGPT-explanation {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #1d1e22;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: 1px solid #3d3d3f;
+  font-size: 15px;
+  line-height: 1.4;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+[color-scheme='dark'] .tianliGPT-suggestions {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+}
+[color-scheme='dark'] .tianliGPT-suggestions .tianliGPT-suggestions-item {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #1d1e22;
+  border-radius: 8px 8px 8px 0;
+  -webkit-border-radius: 8px 8px 8px 0;
+  border: 1px solid #3d3d3f;
+  font-size: 15px;
+  line-height: 1.4;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: fit-content;
+  margin-right: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+[color-scheme='dark'] .tianliGPT-suggestions .tianliGPT-suggestions-item:hover {
+  background: #f2b94b;
+  color: #fff;
+}
+[color-scheme='dark'] .blinking-cursor {
+  background-color: #f2b94b;
+  width: 10px;
+  height: 16px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: inline-block;
+  vertical-align: middle;
+  animation: blinking-cursor 0.5s infinite;
+  -webkit-animation: blinking-cursor 0.5s infinite;
+  -khtml-animation: blinking-cursor 0.5s infinite;
+  -moz-animation: blinking-cursor 0.5s infinite;
+  -o-animation: blinking-cursor 0.5s infinite;
+  -ms-animation: blinking-cursor 0.5s infinite;
+  -webkit-animation: blinking-cursor 0.5s infinite;
+  margin-left: 4px;
+}
+[color-scheme='dark'] .tianliGPT-tag {
+  font-size: 12px;
+  background-color: #f2b94b;
+  color: #1d1e22;
+  font-weight: bold;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left: auto;
+  line-height: 1;
+  padding: 4px;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+}
+[color-scheme='dark'] .tianliGPT-tag:hover {
+  background: #f7f7fa;
+  color: #1d1e22;
+}
+[color-scheme='dark'] ins.adsbygoogle {
+  margin: 16px 0;
+  background: #1d1e22;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #3d3d3f;
+}
+[color-scheme='dark'] #tianliGPT-Toggle {
+  font-size: 12px;
+  background: #f2b94b;
+  color: #1d1e22;
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  margin-left: 6px;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -khtml-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  cursor: pointer;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -khtml-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -ms-transition: 0.3s;
+  font-weight: bold;
+}
+[color-scheme='dark'] #tianliGPT-Toggle:hover {
+  background: #f7f7fa;
+  color: #1d1e22;
+}
+[color-scheme='dark'] .tianliGPT-title-icon {
+  width: 20px;
+  height: 20px;
+}
+[color-scheme='dark'] .tianliGPT-title-icon svg {
+  width: 20px;
+  height: 20px;
+  fill: #f2b94b;
+}
+[color-scheme='dark'] .tianliGPT-title-icon svg path {
+  fill: #f2b94b;
+}
+@-moz-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes blinking-cursor {
+  0% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  40% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  90% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (prefers-color-scheme: dark) and (max-width: 768px) {
+  .post-TianliGPT {
+    margin-top: 22px;
+  }
 }
