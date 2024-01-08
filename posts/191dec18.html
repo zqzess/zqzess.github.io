@@ -35,19 +35,19 @@
   <!-- feed -->
       <link rel="alternate" href="/atom.xml" title="zqzess's Blog" type="application/atom+xml">
   <!-- 页面元数据 -->
-  <title>java实现snmp协分页议获取设备oid 列表 - zqzess's Blog</title>
+  <title>java实现snmp协分页议获取设备oid列表 - zqzess's Blog</title>
   <meta name="keywords" content="java,后端,snmp,博客, Blog">
   <meta desc name="description" content="java实现snmp协分页议获取设备oid 列表 - zqzess - zqzess's Blog">
   
 <meta property="og:type" content="article">
-<meta property="og:title" content="java实现snmp协分页议获取设备oid 列表">
+<meta property="og:title" content="java实现snmp协分页议获取设备oid列表">
 <meta property="og:url" content="https://www.whitemoon.top/posts/191dec18.html">
 <meta property="og:site_name" content="zqzess&#39;s Blog">
 <meta property="og:description" content="java实现snmp协分页议获取设备oid 列表">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2024-01-08T03:00:48.000Z">
-<meta property="article:modified_time" content="2024-01-08T03:02:32.566Z">
+<meta property="article:modified_time" content="2024-01-08T03:07:32.759Z">
 <meta property="article:author" content="zqzess">
 <meta property="article:tag" content="java">
 <meta property="article:tag" content="后端">
@@ -2163,7 +2163,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     root: '/',
     debug: "env",
     default: {"avatar":"/medias/zqzess.png","link":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1660614606622/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1704682966337),
+    lastupdate: new Date(1704683266497),
     cdn: {
       izitoast_css: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/css/iziToast.min.css',
       izitoast_js: 'https://cdn.bootcdn.net/ajax/libs/izitoast/1.4.0/js/iziToast.min.js',
@@ -2580,7 +2580,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        java实现snmp协分页议获取设备oid 列表
+        java实现snmp协分页议获取设备oid列表
       </h1>
       <div class='new-meta-box'>
         
@@ -2664,7 +2664,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 	
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>目前现有场景都是通过一个已知的 oid 去获取对应设备的 oid 信息，最近遇到一个新的需求，要求把设备的 oid 全部拉出来，做成列表，让用户自行选择。因为用户可能并不知道有哪些 oid，由于有的设备 oid 有几百几千，用 getnext 依次去遍历耗时很长，需要实现分页查询</p>
+<h1 id="snmpWalk-分页查询-oid-代码"><a href="#snmpWalk-分页查询-oid-代码" class="headerlink" title="snmpWalk 分页查询 oid 代码"></a>snmpWalk 分页查询 oid 代码</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> List&lt;Object&gt; <span class="title function_">getPageOids</span><span class="params">(SNMPDto dto, PDU pdu, Snmp snmp, Target target)</span> <span class="keyword">throws</span> IOException &#123;</span><br><span class="line">    List&lt;Object&gt; resultVal = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="type">int</span> <span class="variable">count</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (count &lt; dto.getPageSize()) &#123;</span><br><span class="line">        <span class="type">ResponseEvent</span> <span class="variable">responseEvent</span> <span class="operator">=</span> snmp.send(pdu, target);</span><br><span class="line">        Map&lt;Object, Object&gt; oidRes = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (responseEvent != <span class="literal">null</span> &amp;&amp; responseEvent.getResponse() != <span class="literal">null</span>) &#123;</span><br><span class="line">            <span class="type">PDU</span> <span class="variable">responsePDU</span> <span class="operator">=</span> responseEvent.getResponse();</span><br><span class="line">            <span class="keyword">if</span> (responsePDU.getErrorStatus() == PDU.noError) &#123;</span><br><span class="line">                <span class="type">VariableBinding</span> <span class="variable">vb</span> <span class="operator">=</span> responsePDU.get(<span class="number">0</span>);</span><br><span class="line">                <span class="type">OID</span> <span class="variable">oid</span> <span class="operator">=</span> vb.getOid();</span><br><span class="line">                <span class="keyword">if</span> (!oid.toDottedString().startsWith(dto.getOid())) &#123;</span><br><span class="line">                    <span class="comment">// 限定只遍历后面的子节点，如1.3.6.1.2.1.1.9.x.x</span></span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="type">OID</span> <span class="variable">currentOid</span> <span class="operator">=</span> SnmpUtil.getNextOID(oid); <span class="comment">// 获取下一个OID</span></span><br><span class="line">                oidRes.put(<span class="string">&quot;OID&quot;</span>, oid.toDottedString());</span><br><span class="line">                oidRes.put(<span class="string">&quot;value&quot;</span>, vb.getVariable().toString());</span><br><span class="line">                resultVal.add(oidRes);</span><br><span class="line">                count++;</span><br><span class="line">                pdu.clear();</span><br><span class="line">                pdu.add(<span class="keyword">new</span> <span class="title class_">VariableBinding</span>(currentOid));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                logger.error(<span class="string">&quot;snmpwalk-错误：&quot;</span> + responsePDU.getErrorStatusText());</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            logger.error(<span class="string">&quot;snmpwalk-未收到响应。&quot;</span>);</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> resultVal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
   
   
@@ -2679,7 +2680,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
           <div class="copyright license">
-            <div class="license-title">java实现snmp协分页议获取设备oid 列表</div>
+            <div class="license-title">java实现snmp协分页议获取设备oid列表</div>
             <div class="license-link"><a href="https://www.whitemoon.top/posts/191dec18.html">https://www.whitemoon.top/posts/191dec18.html</a>
             </div>
             <div class="license-meta">
@@ -2724,7 +2725,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-08T11:02:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-01-08T11:07:32+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2024年1月8日</p>
@@ -2753,7 +2754,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid 列表 - zqzess's Blog&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid列表 - zqzess's Blog&summary="
           
           >
           
@@ -2765,7 +2766,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid 列表 - zqzess's Blog&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid列表 - zqzess's Blog&summary="
           
           >
           
@@ -2777,7 +2778,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid 列表 - zqzess's Blog&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://www.whitemoon.top/posts/191dec18.html&title=java实现snmp协分页议获取设备oid列表 - zqzess's Blog&summary="
           
           >
           
@@ -2799,7 +2800,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-telegram" title="" rel="external nofollow noopener noreferrer noopener"
           
-            target="_blank" href="https://t.me/share/url?url=https://www.whitemoon.top/posts/191dec18.html&text=java实现snmp协分页议获取设备oid 列表 - zqzess's Blog"
+            target="_blank" href="https://t.me/share/url?url=https://www.whitemoon.top/posts/191dec18.html&text=java实现snmp协分页议获取设备oid列表 - zqzess's Blog"
           
           >
           
@@ -3515,7 +3516,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"zqzess's Blog","url":"https://www.whitemoon.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/","sameAs":["https://github.com/zqzess"],"description":"心之所向，行之所往"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.whitemoon.top/","name":"zqzess's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.whitemoon.top/categories/后端/","name":"后端"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.whitemoon.top/categories/后端/java/","name":"java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.whitemoon.top/posts/191dec18.html","name":"java实现snmp协分页议获取设备oid 列表"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"zqzess's Blog","url":"https://www.whitemoon.top/","keywords":"博客, Blog","description":"心之所向，行之所往","author":{"@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/","description":"心之所向，行之所往"},"publisher":{"@type":"Organization","name":"zqzess's Blog","url":"https://www.whitemoon.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.whitemoon.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java实现snmp协分页议获取设备oid 列表","description":"java实现snmp协分页议获取设备oid 列表","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.whitemoon.top/posts/191dec18.html"},"author":{"@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/"},"publisher":{"@type":"Organization","name":"zqzess's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.whitemoon.top/posts/191dec18.html","wordCount":0,"datePublished":"2024-01-08T03:00:48.000Z","dateModified":"2024-01-08T03:02:32.566Z","articleSection":"后端","keywords":"java,后端,snmp","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"zqzess's Blog","url":"https://www.whitemoon.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/","sameAs":["https://github.com/zqzess"],"description":"心之所向，行之所往"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://www.whitemoon.top/","name":"zqzess's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.whitemoon.top/categories/后端/","name":"后端"}},{"@type":"ListItem","position":2,"item":{"@id":"https://www.whitemoon.top/categories/后端/java/","name":"java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://www.whitemoon.top/posts/191dec18.html","name":"java实现snmp协分页议获取设备oid列表"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"zqzess's Blog","url":"https://www.whitemoon.top/","keywords":"博客, Blog","description":"心之所向，行之所往","author":{"@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/","description":"心之所向，行之所往"},"publisher":{"@type":"Organization","name":"zqzess's Blog","url":"https://www.whitemoon.top/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://www.whitemoon.top?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"java实现snmp协分页议获取设备oid列表","description":"java实现snmp协分页议获取设备oid 列表","inLanguage":["zh-CN","en","zh-TW","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.whitemoon.top/posts/191dec18.html"},"author":{"@type":"Person","name":"zqzess","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://www.whitemoon.top/"},"publisher":{"@type":"Organization","name":"zqzess's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://www.whitemoon.top/posts/191dec18.html","wordCount":0,"datePublished":"2024-01-08T03:00:48.000Z","dateModified":"2024-01-08T03:07:32.759Z","articleSection":"后端","keywords":"java,后端,snmp","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1660614606622/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
